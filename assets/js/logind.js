@@ -10,6 +10,9 @@ function submitBr() {
   var infoObj = {navn:brugerNavn , "password":adgangsKode};
   userData.push(infoObj);
   localStorage.setItem("bruger1" ,JSON.stringify(userData));
+
+    alert("Du er ny oprettet")
+    window.open("login.html") && window.close("logind.html");
 }
 
 function validator() {

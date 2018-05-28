@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content=" Denne side er ment til beboerne af Vrøgum, en lille by i undkanten af Oksbøl og omegnen, hvor de har mulighed for at dele og informerer hinanden om kommende begivenheder i byen. ">
+  <meta name="author" content="Dennis Jensen, Janus Larsen, Simon Hallas, Alexander Larsen">
+  <meta name="keywords" content="vrøgum, portal, fællesskab, begivenheder">
+  <link rel="stylesheet" type="text/css" href="assets/stylesheet/style.css">
+
+  <link rel="shortcut icon" type="image/png" href="assets/images/vrogum.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+
+  <title>Begivenhedopret</title>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html"><img src="assets/images/vrogum.png" class="logo" alt="logo"></a>
+    <div class="navwrapper">
+      <ul>
+        <li><a class="navhover" href="index.html">Forside</a></li>
+        <li><a class="navhover" href="opretbegivenhed.html">Opret Begivenhed</a></li>
+        </ul>
+
+        <div class="dropdown">
+          <span>Bruger</span>
+          <div class="dropdown-content">
+            <a class="navhover" href="bruger.html">Profil<br></a><br>
+            <a class="navhover" href="#">Fortrukne<br></a><br>
+            <a class="navhover" href="login.html">Log ud</a>
+          </div>
+        </div>
+
+    </div>
+  </nav>
+
+  <div class="content_wrapper">
+    <div class="backgroundsection3">
+    <h1 id="headline">Opret begivenhed</h1>
+    <section class="infosection flexbetween">
+        <div id="firstStep">
+          <input type="text" id="begivenhedsoverskrift" class="sejt" placeholder="Overskrift">
+          <input type="text" id="begivenhedsarrangør" class="sejt" placeholder="Arrangør">
+          <input type="text" id="begivenhedsadresse" class="sejt" placeholder="Adresse for arrangement">
+          <input type="time" id="begivenhedstid" class="sejt">
+          <input type="date" id="begivenhedsdato" class="sejt">
+      </div>
+      <div id="secondstep">
+        <input type="file" id="begivenhedsbillede"  class="sejt">
+        <textarea  id="begivenhedsbeskrivelse"  class="sejt" placeholder="Beskrivelse">
+        </textarea>
+        </div>
+        <button type="button" id="begivenhedsoprettelse" value="Opret" class="sejt">Opret</button>
+  </section>
+  </div>
+  <div id="debatvisning" class="backgroundsection3"></div>
+</div>
+  <footer>
+    <p>&copy; Copyright Vrøgum 2018 </p>
+  </footer>
+    <script src="assets/js/begivenhed.js"></script>
+</body>
+</html>

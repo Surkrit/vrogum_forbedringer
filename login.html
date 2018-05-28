@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content=" Denne side er ment til beboerne af Vrøgum, en lille by i undkanten af Oksbøl og omegnen, hvor de har mulighed for at dele og informerer hinanden om kommende begivenheder i byen. ">
+  <meta name="author" content="Dennis Jensen, Janus Larsen, Simon Hallas, Alexander Larsen">
+  <meta name="keywords" content="vrøgum, portal, fællesskab, begivenheder">
+  <link rel="stylesheet" type="text/css" href="assets/stylesheet/style.css">
+
+  <link rel="shortcut icon" type="image/png" href="assets/images/vrogum.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+
+  <title>Login</title>
+</head>
+  <body id="logbody">
+
+    <div class="logbox">
+      <h1>Log in</h1>
+      <div class="logtext">
+        <input type="text" id="user" placeholder="Bruger navn">
+        <input type="password" id="pass" placeholder="Adgangskode">
+      </div>
+        <input type="checkbox" onclick="myFunction()" id="showpass">Vis kode
+        <input type="checkbox" id="check">Husk mig
+        <a id="glad" href="#">Glemt Adgangskode</a>
+        <button type="submit" value="log ind" id="subbut" onclick="validator()">Login</button>
+    </div>
+    <div class="creat">
+      <p>Har du ingen bruger? - det tager kun 1 minut</p>
+      <a id="op" href="makeUser.html">Opret en bruger her</a>
+    </div>
+    <script src="assets/js/logind.js"></script>
+  </body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content=" Denne side er ment til beboerne af Vrøgum, en lille by i undkanten af Oksbøl og omegnen, hvor de har mulighed for at dele og informerer hinanden om kommende begivenheder i byen. ">
+  <meta name="author" content="Dennis Jensen, Janus Larsen, Simon Hallas, Alexander Larsen">
+  <meta name="keywords" content="vrøgum, portal, fællesskab, begivenheder">
+
+  <link rel="stylesheet" type="text/css" href="assets/stylesheet/style.css">
+  <link rel="shortcut icon" type="image/png" href="assets/images/vrogum.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+
+  <title>Forside</title>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html"><img src="assets/images/vrogum.png" class="logo" alt="logo"></a>
+    <div class="navwrapper">
+      <ul>
+        <li><a class="navhover" href="index.html">Forside</a></li>
+        <li><a class="navhover" href="opretbegivenhed.html">Opret Begivenhed</a></li>
+        </ul>
+
+        <div class="dropdown">
+          <span>Bruger</span>
+          <div class="dropdown-content">
+            <a class="navhover" href="bruger.html">Profil<br></a><br>
+            <a class="navhover" href="#">Fortrukne<br></a><br>
+            <a class="navhover" href="login.html">Log ud</a>
+          </div>
+        </div>
+
+    </div>
+  </nav>
+
+
+  <section>
+    <div class="forsidebillederwrapper">
+
+      <img class="forsidebilleder" src="assets/images/forsamlingshus.png" alt="forsamlingshus">
+      <img class="forsidebilleder" src="assets/images/vrogumlob.png" alt="løbet">
+      <img class="forsidebilleder" src="assets/images/raes.png" alt="ræs">
+    </div>
+  </section>
+
+  <div class="content_wrapper">
+
+    <div class="backgroundsection1">
+      <h1>Din guide til booking og oprettelse af begivenheder</h1>
+      <section class="infosection">
+        <div class="infobox">
+          <h3>Idéer til begivenheder</h3>
+          <p>Fødselsdage</p>
+          <p>Fodbold for sjov</p>
+          <p>Lan party</p>
+          <p>Fisketur</p>
+          <p>Foredrag</p>
+          <p>Vinsmagning </p>
+        </div>
+
+        <div class="infobox">
+          <h3>Vil du deltage? Sådan gør du..</h3>
+          <p>1. Find en interessant begivenhed</p>
+          <p>2. Tryk på begivenheden</p>
+          <p>3. Tryk på deltag</p>
+          <p>4. Udfyld de nødvendige informationer</p>
+        </div>
+
+        <div class="infobox">
+          <h3>Andre smarte funktioner</h3>
+          <p>Under begivenheden, kan du trykke på hjertet.<br> Den pågældende begivenhed bliver nu gemt<br> i dine fortrukne</p>
+        </div>
+      </section>
+    </div>
+
+
+    <div class="backgroundsection2">
+      <section>
+        <h1>Hvad leder du efter?</h1>
+        <div class="infosection">
+
+          <button type="button" name="button" onclick="scrolldownM()" class="category">Musik</button>
+
+          <button type="button" name="button" onclick="scrolldownU()" class="category">Udendørs</button>
+
+          <button type="button" name="button" onclick="scrolldownO()" class="category">Børn og Unge</button>
+
+          <button type="button" name="button" onclick="scrolldownF()" class="category">Mad og Drikke </button>
+        </div>
+      </section>
+    </div>
+
+
+    <div id="openModal" class="modal">
+        <div class="modalcontent">
+          <span class="lukmodal"></span>
+          <img src="assets/images/gokart.jpg" class="modalbillede" alt="gokart">
+          <article class="modalheader">
+            <p>23 Juni 2018 kl. 13:00</p>
+            <p>Stationsvej 6, Oksbøl</p>
+            <p>Karsten Knudsen</p>
+            <a href="deltag.html" id="modaldeltag">Deltag</a>
+          </article> 
+
+          <aside class="modaltext">
+            <h2>Lokumsræs</h2>
+            <p>LokumsRæs er en super skæg aktivitet, hvor alle kan deltage.<br>
+            Der køres om kap på de elektriske toiletter i en oppustelig bane, hvor I dyster i en holdkonkurrence.<br><br>
+
+            Der køres heats, 1 imod 1 fra hvert hold og alle deltagere kommer til at køre mindst 2 heats.<br> Imens en hold-deltager kører, skal de andre fra holdet supplere deres kører med lokumsruller, som giver point til det samlede resultat.<br><br>
+
+            Knib ballerne sammen og gør jer klar til et hæsblæsende race.<br> Det er SKIDE skægt – med latter-garanti!
+
+            LokumsRæs er for personer over 13 år.</p>
+          </aside>
+        </div>
+      </div>
+
+<h1>Eller udforsk noget selv</h1>
+    <div class="backgroundsection1">
+      <a class="sealle" href="sealle.html">Se Alle</a>
+
+      <section class="eventsection">
+        <div class="eventbox" id="modalClick">
+          <img src="assets/images/gokart.jpg" alt="gokart" class="billede">
+          <div class="eventtext">
+            <h3>Lokums ræs</h3>
+            <p>LokumsRæs er en super skæg aktivitet, hvor alle kan deltage.
+            Der køres om kap på de elektriske toiletter…<br><br></p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Stationsvej 6, Oksbøl</p>
+          </div>
+          <p>Sport</p>
+        </div>
+
+        <div id="modalClick1" class="eventbox">
+          <img src="assets/images/dadtothebone.jpg" alt="band" class="billede">
+          <div class="eventtext">
+            <h3>Dad to the bone</h3>
+            <p>Spontant og grænseløst og med et væld af inspirationer udforsker Dad to the bone det musikalske grænseland og koncerterne besidder…</p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Fiilsøvej 30, Oksbøl</p>
+          </div>
+          <p>Musik</p>
+        </div>
+
+        <div class="eventbox" id="modalClick2">
+          <img src="assets/images/mad.jpg" alt="vin" class="billede">
+          <div class="eventtext">
+          <h3>Vin smagning</h3>
+          <p>Der findes et hav af forskellige stilarter indenfor vin, hvor både lagring og alder har stort betydning for…<br><br></p>
+          </div>
+          <div class="locationpin">
+          <i class="material-icons" style="font-size:36px">place</i>
+          <p class="adresse">Fiilsøvej 30, Oksbøl</p>
+          </div>
+          <p>Mad og drikke</p>
+        </div>
+      </section>
+    </div>
+
+
+    <div class="backgroundsection2">
+      <h3 id="musik">Musik</h3>
+      <a class="sealle" href="sealle.html">Se Alle</a>
+      <section class="eventsection">
+        <div class="eventbox" id="modalClick3">
+          <img src="assets/images/dadtothebone.jpg" alt="band" class="billede">
+          <div class="eventtext">
+            <h3>Dad to the bone</h3>
+            <p>Spontant og grænseløst og med et væld af inspirationer udforsker Dad to the bone det musikalske grænseland og koncerterne besidder…</p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Fiilsøvej 30, Oksbøl</p>
+          </div>
+          <p>Musik</p>
+        </div>
+
+        <div class="eventbox" id="modalClick4">
+          <img src="assets/images/skotskduo.jpg" alt="Skotsk" class="billede">
+          <div class="eventtext">
+            <h3>Skotsk duo</h3>
+            <p>Vi får besøg af den skotske duo The Mercenary Fiddler Duo, der består af Elsa Jean McTaggart og Gary Lister. Elsa er en fremragende..<br><br></p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Hedelundsvej 15, Vrøgum </p>
+          </div>
+          <p>Musik</p>
+        </div>
+
+        <div class="eventbox" id="modalClick5">
+          <img src="assets/images/flamenco.jpg" alt="flamenco" class="billede">
+          <div class="eventtext">
+            <h3>Flamenco</h3>
+            <p>Flamenco er en musikalsk tradition i Andalusien. I takt med guitarens popularitet i 50- og 60’erne bliver flamenco fremført solo på…<br><br></p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Hedelundsvej 15, Vrøgum</p>
+          </div>
+          <p>Musik</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="backgroundsection1">
+      <h3 id="udendors">Udendørs</h3>
+      <a class="sealle" href="sealle.html">Se Alle</a>
+      <section class="eventsection">
+        <div class="eventbox" id="modalClick6">
+          <img src="assets/images/placeholder2.jpg" alt="vrøgum" class="billede">
+          <div class="eventtext">
+            <h3>Vrøgum løbet</h3>
+            <p>Spændende rute udviklet i samarbejde med Det Danske Forsvar og Oksbøl lejren. Detal i den ultimative udfordring der får fra…<br><br><br></p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Egevej 15, Oksbøl</p>
+          </div>
+          <p>Sport</p>
+        </div>
+
+        <div class="eventbox" id="modalClick7">
+          <img src="assets/images/putntake.jpg" alt="fiske" class="billede">
+          <div class="eventtext">
+            <h3>Put and Take</h3>
+            <p>Vrøgum Fiskesø gør meget for lystfiskernes komfort. Du kan blandt andet grille, der er borde bænke og overdækket spiseplads. Toilet…<br></p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Hedelundsvej 15, Vrøgum </p>
+          </div>
+          <p>Udendørs</p>
+        </div>
+
+        <div class="eventbox" id="modalClick8">
+          <img src="assets/images/udidetblaa.jpg" alt="natur" class="billede">
+          <div class="eventtext">
+            <h3>Ud i det blå</h3>
+            <p>Gå en tur sammen med dine naboer og venner, i den smukke natur i Vrøgum. Vi har en helt execeptionel natur som…</p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Hedelundsvej 15, Vrøgum </p>
+          </div>
+          <p>Udendørs</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="backgroundsection1">
+      <h3 id="born">Børn og Unge</h3>
+      <a class="sealle" href="sealle.html">Se Alle</a>
+      <section class="eventsection">
+        <div class="eventbox" id="modalClick9">
+          <img src="assets/images/lan.jpg" alt="lan" class="billede">
+          <div class="eventtext">
+            <h3>Lan party</h3>
+            <p>Vi mødes hjemme ved mig, og sætter alles computere op. Jeg tænker vi spiller Fortnite og andre sjove spil? Jeg står for lidt mad og noget drikke til natten..</p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Bygmarken 4, Oksbøl </p>
+          </div>
+          <p>Børn og unge</p>
+        </div>
+
+        <div class="eventbox" id="modalClick10">
+          <img src="assets/images/fodbold.jpg" alt="bold" class="billede">
+          <div class="eventtext">
+            <h3>Fodbold</h3>
+            <p>Jeg vil godt invitere jer ned og spille en omgang fodbold. Det er bare for sjov, og synes det kunne være hyggeligt hvis..<br><br></p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Sportspladsen, Vrøgum </p>
+          </div>
+          <p>Børn og unge</p>
+        </div>
+
+        <div class="eventbox" id="modalClick11">
+          <img src="assets/images/lektiecafe.jpg" alt="lektie" class="billede">
+          <div class="eventtext">
+            <h3>Lektie café</h3>
+            <p>Nu skal vi snart til eksamen, og i den forbindelse tænker jeg vi kunne mødes og hjælpe hinanden lidt. Jeg har booket kulturhuset..<br><br></p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Hedelundsvej 15, Vrøgum </p>
+          </div>
+          <p>Børn og unge</p>
+        </div>
+      </section>
+    </div>
+
+
+    <div class="backgroundsection2">
+      <h3 id="food">Mad og Drikke</h3>
+      <a class="sealle" href="sealle.html">Se Alle</a>
+      <section class="eventsection">
+        <div class="eventbox" id="modalClick12">
+          <img src="assets/images/mad.jpg" alt="vin" class="billede">
+          <div class="eventtext">
+            <h3>Vin smagning</h3>
+            <p>Der findes et hav af forskellige stilarter indenfor vin, hvor både lagring og alder har stort betydning for…<br><br></p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Fiilsøvej 30, Oksbøl</p>
+          </div>
+          <p>Mad og drikke</p>
+        </div>
+
+        <div class="eventbox" id="modalClick13">
+          <img src="assets/images/spisning.jpg" alt="fællesspisning" class="billede">
+          <div class="eventtext">
+            <h3>Fælles spisning</h3>
+            <p>Vi gentager succesen fra sidste måned, og laver en fællessspisnings aften. Det bliver ved ballonparken, da vejret ser ud til at holde. Alle medbringer en form for...</p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Egevej 15, Oksbøl</p>
+          </div>
+          <p>Mad og drikke</p>
+        </div>
+
+        <div class="eventbox" id="modalClick14">
+          <img src="assets/images/foredrag.jpg" alt="foredrag" class="billede">
+          <div class="eventtext">
+            <h3>Foredrag v/ Jesper Koch</h3>
+            <p>Jeg har booket et foredrag med Jesper Koch, måske bedst kendt for sin medvirken i tv3 programmet “masterchef”. Dette er en unik mulighed...</p>
+          </div>
+          <div class="locationpin">
+            <i class="material-icons" style="font-size:36px">place</i>
+            <p class="adresse">Hedelundsvej 15, Vrøgum </p>
+          </div>
+          <p>Mad og Drikke</p>
+        </div>
+      </section>
+    </div>
+
+  </div>
+<footer>
+<p>&copy; Copyright Vrøgum 2018 </p>
+</footer>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/script2.js"></script>
+<script src="assets/js/script3.js"></script>
+<script src="assets/js/script4.js"></script>
+  </body>
+</html>

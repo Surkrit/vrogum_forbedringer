@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content=" Denne side er ment til beboerne af Vrøgum, en lille by i undkanten af Oksbøl og omegnen, hvor de har mulighed for at dele og informerer hinanden om kommende begivenheder i byen. ">
+  <meta name="author" content="Dennis Jensen, Janus Larsen, Simon Hallas, Alexander Larsen">
+  <meta name="keywords" content="vrøgum, portal, fællesskab, begivenheder">
+  <link rel="stylesheet" type="text/css" href="assets/stylesheet/style.css">
+
+  <link rel="shortcut icon" type="image/png" href="assets/images/vrogum.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+
+  <title>Deltag</title>
+</head>
+  <body>
+
+    <nav>
+      <a href="index.html"><img src="assets/images/vrogum.png" class="logo" alt="logo"></a>
+      <div class="navwrapper">
+        <ul>
+          <li><a class="navhover" href="index.html">Forside</a></li>
+          <li><a class="navhover" href="opretbegivenhed.html">Opret Begivenhed</a></li>
+          </ul>
+
+          <div class="dropdown">
+            <span>Bruger</span>
+            <div class="dropdown-content">
+              <a class="navhover" href="bruger.html">Profil<br></a><br>
+              <a class="navhover" href="#">Fortrukne<br></a><br>
+              <a class="navhover" href="login.html">Log ud</a>
+            </div>
+          </div>
+
+      </div>
+    </nav>
+  <div class="progress">
+    <img id="fremskridt" src="assets/images/fremskridt.png" alt="fremskridt">
+    <h3 id="billetter">Vælg billetter</h3>
+  </div>
+
+<section>
+  <div class="overordnet">
+    <div id="beskrivelse">
+      <h3>Beskrivelse</h3>
+      <p id="beskrivelsetekst">Adgang til lokumsræs fra 13.00-17.00</p>
+    </div>
+    <div id="antal">
+      <h3>Antal</h3>
+
+      <div class="input-group">
+        <input type="button" value="-" id="buttonminus">
+
+        <input type="number" step="1" value="0" id="quantityfield">
+
+        <input type="button" value="+" id="buttonplus">
+      </div>
+    </div>
+    <div id="pris">
+      <h3>Pris pr. stk</h3>
+      <h3>DKK 50.00</h3>
+    </div>
+    <div id="total">
+      <h3>Total</h3>
+      <h3 id="test1">DKK 0.00</h3>
+    </div>
+  </div>
+  <button id="næste">
+    Næste
+  </button>
+</section>
+<img id="payment" src="assets/images/payment.jpg" alt="payment">
+<footer>
+<p>&copy; Copyright Vrøgum 2018 </p>
+</footer>
+<script src="assets/js/script.js">
+</script>
+<script src="assets/js/script2.js">
+</script>
+<script src="assets/js/script3.js">
+</script>
+</body>
+</html>

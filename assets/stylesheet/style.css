@@ -106,9 +106,20 @@ a:hover {
   margin-left: 5%;
 }
 
+.sliderimg { display: block;
+  height: 70vh;
+}
+
+.sliderimg img { position:absolute;
+  display: block;
+  transition: opacity 1s;
+  opacity: 1; }
+
+.sliderimg img.hidden { opacity:0; }
+
 .forsidebilleder {
-  height: 75vh;
   width: 100%;
+  height: 70vh;
 }
 
 .infosection {

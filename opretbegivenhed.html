@@ -42,18 +42,18 @@
     <h1 id="headline">Opret begivenhed</h1>
     <section class="infosection flexbetween">
         <div id="firstStep">
-          <input type="text" id="begivenhedsoverskrift" class="sejt" placeholder="Overskrift">
-          <input type="text" id="begivenhedsarrangør" class="sejt" placeholder="Arrangør">
-          <input type="text" id="begivenhedsadresse" class="sejt" placeholder="Adresse for arrangement">
-          <input type="time" id="begivenhedstid" class="sejt">
-          <input type="date" id="begivenhedsdato" class="sejt">
+          <input type="text" id="beOv" class="sejt" placeholder="Overskrift">
+          <input type="text" id="beAr" class="sejt" placeholder="Arrangør">
+          <input type="text" id="beAd" class="sejt" placeholder="Adresse for arrangement">
+          <input type="time" id="beTid" class="sejt"></input>
+          <input type="date" id="beDato" class="sejt">
       </div>
       <div id="secondstep">
         <input type="file" id="begivenhedsbillede"  class="sejt">
-        <textarea  id="begivenhedsbeskrivelse"  class="sejt" placeholder="Beskrivelse">
+        <textarea  id="beBe"  class="sejt" placeholder="Beskrivelse">
         </textarea>
         </div>
-        <button type="button" id="begivenhedsoprettelse" value="Opret" class="sejt">Opret</button>
+        <button type="submit" id="opBe" value="create" class="sejt" onclick="opBegivenhed()">Opret</button>
   </section>
   </div>
   <div id="debatvisning" class="backgroundsection3"></div>

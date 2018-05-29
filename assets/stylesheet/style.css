@@ -197,14 +197,12 @@ a:hover {
 }
 
 .backgroundsection1 {
-  background-color: white;
   padding-top: 1%;
   padding-bottom: 1%;
   margin: 10px 120px 10px 120px;
 }
 
 .backgroundsection2 {
-  background-color: white;
   padding-top: 1%;
   padding-bottom: 1%;
   margin: 10px 120px 10px 120px;
@@ -214,8 +212,17 @@ a:hover {
   margin-left: 5%;
 }
 
-/* Index side slut */
+/*Index side slut */
+/*Back ground box*/
+.graybox {
+  background-color: #f8f8f8;
+  padding: 10px 120px 10px 120px;
+}
 
+.whitebox {
+  background-color: white;
+  padding: 10px 120px 10px 120px;
+}
 /*Login css*/
 .logbox {
   border-style: solid;

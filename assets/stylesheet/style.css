@@ -503,7 +503,6 @@ input[type="button"] {
   text-align: center;
   cursor: pointer;
 }
-
 /*Opret af begivenhed*/
 
 .backgroundsection3 {
@@ -607,10 +606,32 @@ input[type="button"] {
     background-color: #fafafa;
     margin: auto;
     width: 40%;
-
     border-radius: 10px;
 }
 
 .modaltext {
   padding: 15px 100px 50px 100px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40vh;
+  padding: 12px;
+  color: white;
+  border-radius: 10px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  &#10095;
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: #388c01;
+  color: white;
 }

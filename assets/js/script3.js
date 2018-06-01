@@ -12,6 +12,12 @@ setInterval(function(){
   kage.querySelector(':first-child').classList.add('hidden');
   kage.querySelector(':nth-child(2)').classList.remove('hidden');
 }, 5000)
+
+
+
+
+
+
 /* Slider slut */
 
 /*Scroll down page starts */

@@ -503,6 +503,7 @@ input[type="button"] {
   text-align: center;
   cursor: pointer;
 }
+
 /*Opret af begivenhed*/
 
 .backgroundsection3 {
@@ -624,11 +625,13 @@ input[type="button"] {
 
 .prev {
   left: 0;
+  z-index: 1;
+  border: #388c01;
 }
 
 .next {
-  &#10095;
   right: 0;
+  border: #388c01;
 }
 
 .prev:hover, .next:hover {

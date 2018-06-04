@@ -119,7 +119,7 @@ a:hover {
 .sealle {
   color: black;
   margin-top: -38px;
-  margin-right: 5%;
+  margin-right: 7%;
   float:right;
   text-decoration: underline;
 }
@@ -200,7 +200,7 @@ a:hover {
 }
 
 #musik, #udendors, #born, #food {
-  margin-left: 5%;
+  margin-left: 6%;
 }
 
 /* Index side slut */
@@ -316,7 +316,7 @@ a:hover {
 
 #test {
   text-align: left;
-  margin-left: 2%;
+  margin-left: 4%;
   font-size: 24px;
   margin-top: 20px;
 }
@@ -325,7 +325,7 @@ a:hover {
   border: solid #388c01;
   height: 30px;
   width: 50%;
-  margin-left: 2%;
+  margin-left: 4%;
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -348,7 +348,7 @@ a:hover {
 
 #selvoprettet {
   text-align: left;
-  margin-left: 2%;
+  margin-left: 4%;
   margin-top: 70px;
 }
 

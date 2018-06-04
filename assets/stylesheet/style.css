@@ -106,9 +106,20 @@ a:hover {
   margin-left: 5%;
 }
 
+.sliderimg { display: block;
+  height: 70vh;
+}
+
+.sliderimg img { position:absolute;
+  display: block;
+  transition: opacity 1s;
+  opacity: 1; }
+
+.sliderimg img.hidden { opacity:0; }
+
 .forsidebilleder {
-  height: 75vh;
   width: 100%;
+  height: 70vh;
 }
 
 .infosection {
@@ -186,14 +197,12 @@ a:hover {
 }
 
 .backgroundsection1 {
-  background-color: white;
   padding-top: 1%;
   padding-bottom: 1%;
   margin: 10px 120px 10px 120px;
 }
 
 .backgroundsection2 {
-  background-color: white;
   padding-top: 1%;
   padding-bottom: 1%;
   margin: 10px 120px 10px 120px;
@@ -203,8 +212,17 @@ a:hover {
   margin-left: 6%;
 }
 
-/* Index side slut */
+/*Index side slut */
+/*Back ground box*/
+.graybox {
+  background-color: #f8f8f8;
+  padding: 10px 120px 10px 120px;
+}
 
+.whitebox {
+  background-color: white;
+  padding: 10px 120px 10px 120px;
+}
 /*Login css*/
 .logbox {
   border-style: solid;
@@ -523,7 +541,7 @@ input[type="button"] {
   float: top;
 }
 
-#begivenhedsbeskrivelse {
+#beBe{
   display: flex;
   height: 295px;
   width: 400px;
@@ -589,10 +607,34 @@ input[type="button"] {
     background-color: #fafafa;
     margin: auto;
     width: 40%;
-
     border-radius: 10px;
 }
 
 .modaltext {
   padding: 15px 100px 50px 100px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40vh;
+  padding: 12px;
+  color: white;
+  border-radius: 10px;
+}
+
+.prev {
+  left: 0;
+  z-index: 1;
+  border: #388c01;
+}
+
+.next {
+  right: 0;
+  border: #388c01;
+}
+
+.prev:hover, .next:hover {
+  background-color: #388c01;
+  color: white;
 }

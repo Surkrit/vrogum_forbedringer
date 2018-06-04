@@ -1,18 +1,17 @@
 /* Slider start */
-var Slider = 0;
-imageSlide();
-
-function imageSlide() {
-    var i;
-    var x = document.getElementsByClassName("forsidebilleder");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    Slider++;
-    if (Slider > x.length) {Slider = 1}
-    x[Slider-1].style.display = "block";
-    setTimeout(imageSlide, 7000);
+var i=0;
+var transition = document.querySelector('.sliderimg');
+var els = transition.querySelectorAll(':not(:first-child)');
+for (i=0; i < els.length; i++) {
+  els[i].classList.add('hidden');
 }
+transition.addEventListener('transitionend', function(){
+  transition.insertBefore(transition.querySelector(':first-child.hidden'), null);
+});
+setInterval(function(){
+  transition.querySelector(':first-child').classList.add('hidden');
+  transition.querySelector(':nth-child(2)').classList.remove('hidden');
+}, 5000)
 /* Slider slut */
 
 /*Scroll down page starts */

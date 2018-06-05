@@ -556,7 +556,14 @@ input[type="button"] {
 #begivenhedsoprettelse {
   display: flex;
   height: 30px;
+}
 
+#infoUser {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .modalheader {

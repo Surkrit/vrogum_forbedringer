@@ -69,9 +69,12 @@ function buildList() {
     var daElm = document.createElement("p");
     var beElm = document.createElement("p");
 
-    liElm.style.borderColor = "#388c01";
-
-    pElm.innerHTML = dataList[i].text;
+    ovElm.innerHTML = dataList[i].text;
+    arElm.innerHTML = dataList[i].text;
+    adElm.innerHTML = dataList[i].text;
+    tiElm.innerHTML = dataList[i].text;
+    daElm.innerHTML = dataList[i].text;
+    beElm.innerHTML = dataList[i].text;
 
     liElm.appendChild(ovElm);
     liElm.appendChild(arElm);
@@ -111,6 +114,7 @@ opBeBtn.addEventListener("click", function(event)
 {
 
   infoUser.style.display = "block";
+  infoUser.style = 
 });
 
 var submitUserBtn = document.querySelector("#opBe");

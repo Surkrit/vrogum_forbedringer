@@ -36,7 +36,8 @@ function getLocal()
   }
 }
 
-function submitUser(overSkrift, arrangør, adresse, tid, dato, beskrivelse){
+function submitUser(overSkrift, arrangør, adresse, tid, dato, beskrivelse)
+{
   var origUser = getLocal();
 
   var newUser = {
@@ -68,6 +69,8 @@ function buildList() {
     var tiElm = document.createElement("p");
     var daElm = document.createElement("p");
     var beElm = document.createElement("p");
+    var delBtnEml = document.createElement("button");
+    var ediBtnEml  = document.createElement("button");
 
     ovElm.innerHTML = dataList[i].text;
     arElm.innerHTML = dataList[i].text;
@@ -76,31 +79,76 @@ function buildList() {
     daElm.innerHTML = dataList[i].text;
     beElm.innerHTML = dataList[i].text;
 
+    ediBtnEml.innerHTML = "Edite";
+    ediBtnEml.setAttribute("data-index", i);
+
+    ediBtnEml.addEventListener("click", submitEdiEvent);
+
+    delBtnEml.innerHTML = "Delete";
+    delBtnEml.setAttribute("data-index", i);
+
+    delBtnEml.addEventListener("click", submitDelEvent);
+
+
     liElm.appendChild(ovElm);
     liElm.appendChild(arElm);
     liElm.appendChild(adElm);
     liElm.appendChild(tiElm);
     liElm.appendChild(adElm);
     liElm.appendChild(beElm);
+    liElm.appendChild(delBtnEml);
+    liElm.appendChild(ediBtnEml);
 
     ulElm.appendChild(liElm);
   }
+}
+
+function submitEdiEvent(event)
+{
+ var arrIndex = event.target.getAttribute("data-index");
+ var user = getLocal();
+ var promEdi = prompt();
+
+console.log(user[arrIndex].text);
+ if(promEdi.length > 0)
+ {
+   user[arrIndex].text = promEdi;
+ }
+ else
+ {
+   alert("Du skrev ikke noget");
+ }
+
+ setLocal(user);
+ buildList();
+}
+
+function submitDelEvent(event)
+{
+ var arrIndex = event.target.getAttribute("data-index");
+ var user = getLocal();
+
+ user.splice(arrIndex, 1);
+
+ setLocal(user);
+ buildList();
 }
 
 function submitUserEvent(event)
 {
  console.log("submit new User goes here");
 
- var userText = document.querySelector("#beOv");
- var userArr = document.querySelector("#beAr");
- var userAdre = document.querySelector("#beAd");
- var userTim = document.querySelector("#beTid");
- var userDat = document.querySelector("#beDato");
- var userBeskriv = document.querySelector("#beBe");
+ var beOv = document.querySelector("#beOv");
+ var beAr = document.querySelector("#beAr");
+ var beAd = document.querySelector("#beAd");
+ var beTid = document.querySelector("#beTid");
+ var beDato = document.querySelector("#beDato");
+ var beBe = document.querySelector("#beBe");
 
- submitUser(userText.value, userArr.value, userAdre.value, userTim.value, userDat.value, userBeskriv.value);
+ submitUser(beOv.value, beAr.value, beAd.value, beTid.value, beDato.value, beBe.value);
  buildList();
  infoUser.style.display = "none";
+
 }
 
 window.onload = function()
@@ -114,7 +162,6 @@ opBeBtn.addEventListener("click", function(event)
 {
 
   infoUser.style.display = "block";
-  infoUser.style = 
 });
 
 var submitUserBtn = document.querySelector("#opBe");

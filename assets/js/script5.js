@@ -24,7 +24,7 @@ function showDivs(n) {
 
 /* Slider next/previous slut */
 
-/*window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 480 || document.documentElement.scrollTop > 480) {
@@ -36,7 +36,7 @@ function scrollFunction() {
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-} */
+}
 
 document.getElementById("favIcon").classList.toggle('fas fa-heart');
 document.getElementById("favIcon").classList.toggle('far fa-heart');

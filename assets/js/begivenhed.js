@@ -71,6 +71,7 @@ function buildList() {
     var beElm = document.createElement("p");
     var delBtnEml = document.createElement("button");
     var ediBtnEml  = document.createElement("button");
+    var deltagBtnEml = document.createElement("button");
 
     ovElm.innerHTML = dataList[i].text;
     arElm.innerHTML = dataList[i].text;
@@ -89,6 +90,11 @@ function buildList() {
 
     delBtnEml.addEventListener("click", submitDelEvent);
 
+    deltagEml.innerHTML = "Deltag";
+    deltagEml.setAttribute("data-index", i);
+
+    deltagBtnEml.addEventListener("click", submitDeltagEvent);
+
 
     liElm.appendChild(ovElm);
     liElm.appendChild(arElm);
@@ -98,6 +104,7 @@ function buildList() {
     liElm.appendChild(beElm);
     liElm.appendChild(delBtnEml);
     liElm.appendChild(ediBtnEml);
+    liElm.appendChild(deltagBtnEml);
 
     ulElm.appendChild(liElm);
   }
@@ -147,8 +154,14 @@ function submitUserEvent(event)
 
  submitUser(beOv.value, beAr.value, beAd.value, beTid.value, beDato.value, beBe.value);
  buildList();
+ infoUser.style.border = "5px solid green";
  infoUser.style.display = "none";
 
+}
+
+function submitDeltagEvent(event)
+{
+  
 }
 
 window.onload = function()

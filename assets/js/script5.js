@@ -24,7 +24,7 @@ function showDivs(n) {
 
 /* Slider next/previous slut */
 
-window.onscroll = function() {scrollFunction()};
+/*window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 480 || document.documentElement.scrollTop > 480) {
@@ -33,10 +33,20 @@ function scrollFunction() {
         document.getElementById("backtoTop").style.display = "none";
     }
 }
+
+
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
-document.getElementById("favIcon").classList.toggle('fas fa-heart');
-document.getElementById("favIcon").classList.toggle('far fa-heart');
+*/
+function fav() {
+var icon = document.getElementById("favIcon");
+  if (icon.classList.contains("fa-star-o")) {
+    icon.classList.remove("fa-star-o");
+    icon.classList.add("fa-star");
+  } else {
+    icon.classList.remove("fa-star");
+    icon.classList.add("fa-star-o");
+  }
+}

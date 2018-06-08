@@ -160,7 +160,10 @@ li {
 
 .infoboxhead {
   text-align: center;
-  border-bottom: solid black 1px;
+  background-color: #388c01;
+  color: white;
+  margin-top: -0.01vh;
+  padding-bottom: 3px;
 }
 
 .categorybox {
@@ -734,4 +737,46 @@ input[type="button"] {
 
 #backtoTop:hover {
   background-color: grey;
+}
+
+/*#favBtn {
+  background: none;
+  border: none;
+}
+
+.fa {
+  color: gold;
+  background: none;
+}
+
+.fa-star-o {
+  color: black;
+}*/
+
+#fav {
+  display: none;
+  border:
+}
+
+#fav+label {
+  padding: 3px 7px;
+  cursor: pointer
+}
+
+#fav+label>.fa-star-o {
+  display: inline-block
+}
+
+#fav+label>.fa-star {
+  display: none;
+  border: none;
+}
+
+#fav:checked+label>.fa-star-o {
+  display: none;
+  border: none;
+}
+
+#fav:checked+label>.fa-star {
+  display: inline-block
 }

@@ -13,6 +13,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
+
 
   <title>Forside</title>
 </head>
@@ -136,12 +138,16 @@
             <p>Dato: 23 Juni</p>
           </div>
 
-          <button id="favBtn" onclick="fav();">
-            <i id="favIcon" class="far fa-heart"></i>&nbsp;Favourite
+          <button id="favBtn" onclick="fav()">
+            <i id="favIcon" class="fa fa-star-o">  </i>
           </button>
 
+          <input id='fav' type='checkbox'>
+          <label for='fav'>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star"></i>
+          </label>
 
-          <br><br>
           <span  class="fas fa-heart"></span>
         </div>
 
@@ -155,7 +161,11 @@
             <p>Spontant og grænseløst og med et væld af inspirationer udforsker Dad to the bone det musikalske grænseland og koncerterne besidder…</p>
             <p class="adresse">Fiilsøvej 30, Oksbøl</p>
             <p>Dato: 23 Juni</p>
+
           </div>
+          <button id="favBtn" onclick="fav()">
+          <i id="favIcon" class="fa fa-star-o">  </i>
+          </button>
         </div>
 
         <div class="eventbox">

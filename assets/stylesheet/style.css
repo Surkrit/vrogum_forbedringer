@@ -8,7 +8,6 @@ body {
   p {
   font-size: 13px;
   font-family: 'Arimo', sans-serif;
-  margin-left: 5px;
 }
 
 h1 {
@@ -25,7 +24,12 @@ h2 {
 
 h3 {
   font-family: 'Arimo', sans-serif;
-  margin-left: 5px;
+}
+
+h5 {
+  margin: 0;
+  margin-left: 2vh;
+  padding: 0;
 }
 
 footer {
@@ -37,12 +41,11 @@ nav {
   background-color: #388c01;
   z-index: 1;
   color: white;
-  padding: 4px;
+  width: 100%;
 }
 
 .navwrapper {
   float:right;
-  margin-right: 45px;
   display: flex;
 }
 
@@ -50,7 +53,6 @@ ul {
   display: flex;
   list-style-type: none;
   float: right;
-  z-index: 1;
 }
 
 a {
@@ -60,11 +62,10 @@ a {
 }
 
 li {
-  padding: 10px;
+  padding: 5px;
   list-style-type: none;
-  margin-right:35px;
+  margin-right: 25px;
   color: white;
-  z-index: 1;
 }
 
 .dropdown {
@@ -86,16 +87,15 @@ li {
   z-index: 1;
 }
 
-a:hover {
-  color: black;
+.navhover:hover {
+  text-decoration: underline;
 }
 
 .logo {
-  width: 62px;
-  height: 62px;
-  margin-top: 5px;
-  margin-left: 2.5%;
-  list-style-type: none;
+  width: 7vh;
+  height: 7vh;
+  margin-top: 2px;
+  margin-left: 2%;
 }
 
 /* Generel HTML slut */
@@ -115,49 +115,52 @@ a:hover {
   transition: opacity 1s;
   opacity: 1; }
 
-.sliderimg img.hidden { opacity:0; }
+.sliderimg img.hidden { opacity: 0; }
 
 .forsidebilleder {
   width: 100%;
   height: 70vh;
 }
 
-.infosection {
-  display: flex;
-  box-sizing: border-box;
-}
-
 .sealle {
   color: black;
-  margin-top: -38px;
-  margin-right: 7%;
+  margin-top: -5vh;
+  margin-right: 6.5%;
   float:right;
   text-decoration: underline;
 }
 
-.eventsection {
+.infosection {
   display: flex;
-  box-sizing: border-box;
 }
 
-.infobox {
-  text-align: center;
-  flex: 1;
-  border: solid #388c01;
-  border-radius: 10px;
-  margin: 70px;
+.categorysection {
+  display: flex;
 }
 
 .category {
-  width: 200px;
-  height: 50px;
+  width: 20vh;
+  padding: 2vh 4vh;
+  margin: 3% 6%;
+  margin-right: auto;
   background-color: #388c01;
   color: white;
-  font-size: 16px;
   border: solid #388c01;
   border-radius: 50px;
-  margin: 70px;
   cursor: pointer;
+}
+
+.infobox {
+  border: solid #388c01;
+  width: 100%;
+  margin: 3% 6.5% 5% 6.5%;
+  background-color: white;
+  text-align: center;
+}
+
+.infoboxhead {
+  text-align: center;
+  border-bottom: solid black 1px;
 }
 
 .categorybox {
@@ -171,34 +174,49 @@ a:hover {
   text-decoration: none;
 }
 
+.eventsection {
+  display: flex;
+}
+
 .eventbox {
-  background-image: url(assets/images/mad.jpg);
-  background-repeat:no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
+  min-width: 150px;
+  min-height: 200px;
+  max-width: 37vh;
   border: solid #388c01;
   border-radius: 10px;
   margin: 15px 65px 15px 65px;
-  cursor: pointer;
+  text-align: center;
+}
+
+.eventbox:hover {
+
 }
 
 .billede {
   background-size: cover;
-  width: 100.2%;
+  width: 100%;
+  margin:0;
   object-fit: contain;
   background-size: cover;
-  border-radius: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
-.locationpin {
-  display: flex;
-  border-bottom: solid #388c01;
+.eventtext {
+  background-color: #388c01;
+  color: white;
+  text-align: center;
+  margin-top: -1vh;
+  padding: 1px
 }
 
 .backgroundsection1 {
   padding-top: 1%;
   padding-bottom: 1%;
+  width: 100%;
   margin: 10px 120px 10px 120px;
 }
 
@@ -208,8 +226,8 @@ a:hover {
   margin: 10px 120px 10px 120px;
 }
 
-#musik, #udendors, #born, #food {
-  margin-left: 6%;
+#musik, #udendors, #born, #food, #mostpopular {
+  margin-left: 5%;
 }
 
 /*Index side slut */
@@ -221,6 +239,7 @@ a:hover {
 
 .whitebox {
   background-color: white;
+
   padding: 10px 120px 10px 120px;
 }
 /*Login css*/
@@ -329,7 +348,7 @@ a:hover {
 
 /*Bruger*/
 .formsection {
-  margin-top: 40px;
+  margin-top: 8%;
 }
 
 #test {
@@ -337,6 +356,11 @@ a:hover {
   margin-left: 4%;
   font-size: 24px;
   margin-top: 20px;
+}
+
+#placeholder {
+  padding: 0;
+  margin: 0;
 }
 
 #navn, #email, #adgangskode {
@@ -358,18 +382,35 @@ a:hover {
   background-color: #388c01;
   border-radius: 25px;
   padding: 10px;
-  margin-left: 34%;
+  margin-left: 42%;
   margin-top: 20px;
   color: #ffffff;
-  width: 20%;
+  width: 10%;
+  border: none;
+  cursor: pointer;
+}
+
+.test30 {
+  display: flex;
+}
+
+.test40 {
+  flex: 1;
+}
+
+.test50 {
+  flex: 1;
 }
 
 #selvoprettet {
   text-align: left;
   margin-left: 4%;
-  margin-top: 70px;
 }
 
+#fortrukne {
+  text-align: left;
+  margin-left: 4%;
+}
 /*Deltag*/
 #fremskridt {
   width: 100px;
@@ -522,10 +563,21 @@ input[type="button"] {
 }
 
 .sejt {
+  margin: 1vh 2vh 2vh ;
   font-size: 16px;
   justify-content: space-between;
-  margin: 20px;
   display: block;
+}
+
+#opBe {
+  width: 15vh;
+  padding: 1vh;
+  margin-bottom: 2.2vh;
+  background-color: #388c01;
+  color: white;
+  border: solid #388c01;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 #firstStep {
@@ -556,7 +608,14 @@ input[type="button"] {
 #begivenhedsoprettelse {
   display: flex;
   height: 30px;
+}
 
+#infoUser {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .modalheader {
@@ -574,10 +633,10 @@ input[type="button"] {
 #modaldeltag {
   color: white;
   background-color: #388c01;
-  border: 2px solid white;
-  border-radius: 15px;
-  height: 20px;
-  padding: 5px;
+}
+
+#modaldeltag:hover {
+  text-decoration: underline;
 }
 
 .modalbillede {
@@ -625,7 +684,6 @@ input[type="button"] {
 
 .prev {
   left: 0;
-  z-index: 1;
   border: #388c01;
 }
 
@@ -637,4 +695,43 @@ input[type="button"] {
 .prev:hover, .next:hover {
   background-color: #388c01;
   color: white;
+}
+
+#test1 {
+  margin-top: -1vh;
+  float: left;
+}
+
+#modalClick {
+  cursor: pointer;
+}
+
+.far-fa-heart {
+  cursor: pointer;
+}
+
+.test10 {
+  cursor: pointer;
+  background-color:none;
+  border: none;
+}
+
+#backtoTop {
+
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: #388c01;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#backtoTop:hover {
+  background-color: grey;
 }

@@ -12,7 +12,7 @@ function submitBr() {
   localStorage.setItem("bruger1" ,JSON.stringify(userData));
 
     alert("Du er ny oprettet")
-    window.open("login.html") && window.close("logind.html");
+    window.open("login.html") && window.close("makeUser.html");
 }
 
 function validator() {

@@ -37,23 +37,30 @@
     </div>
   </nav>
 
-  <div class="content_wrapper">
+    <div class="content_wrapper">
     <div class="backgroundsection3">
     <h1 id="headline">Opret begivenhed</h1>
-    <section class="infosection flexbetween">
+    <section class="infosection flexbetween" id="infoUser">
         <div id="firstStep">
-          <input type="text" id="beOv" class="sejt" placeholder="Overskrift">
-          <input type="text" id="beAr" class="sejt" placeholder="Arrangør">
-          <input type="text" id="beAd" class="sejt" placeholder="Adresse for arrangement">
-          <input type="time" id="beTid" class="sejt"></input>
+          <h5>Begivenhed</h5>
+          <input type="text" id="beOv" class="sejt">
+          <h5>Arrangør</h5>
+          <input type="text" id="beAr" class="sejt">
+          <h5>Adresse for arrangement</h5>
+          <input type="text" id="beAd" class="sejt">
+          <h5>Dato</h5>
           <input type="date" id="beDato" class="sejt">
+          <h5>Tidspunkt</h5>
+          <input type="time" id="beTid" class="sejt" placeholder="Tidspunkt">
       </div>
       <div id="secondstep">
+        <h5>Tilføj billede</h5>
         <input type="file" id="begivenhedsbillede"  class="sejt">
-        <textarea  id="beBe"  class="sejt" placeholder="Beskrivelse">
+        <h5>Beskrivelse af begivenheden</h5>
+        <textarea  id="beBe"  class="sejt">
         </textarea>
         </div>
-        <button type="submit" id="opBe" value="create" class="sejt" onclick="opBegivenhed()">Opret</button>
+        <button type="submit" id="opBe" value="create" onclick="opBegivenhed()">Opret</button>
   </section>
   </div>
   <div id="debatvisning" class="backgroundsection3"></div>

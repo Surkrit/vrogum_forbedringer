@@ -1,5 +1,5 @@
 /* Slider start */
-var i=0;
+/*var i=0;
 var transition = document.querySelector('.sliderimg');
 var els = transition.querySelectorAll(':not(:first-child)');
 for (i=0; i < els.length; i++) {
@@ -11,7 +11,7 @@ transition.addEventListener('transitionend', function(){
 setInterval(function(){
   transition.querySelector(':first-child').classList.add('hidden');
   transition.querySelector(':nth-child(2)').classList.remove('hidden');
-}, 5000)
+}, 5000)*/
 /* Slider slut */
 
 /*Scroll down page starts */

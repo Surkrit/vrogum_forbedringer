@@ -161,6 +161,8 @@ li {
 .infoboxhead {
   text-align: center;
   border-bottom: solid black 1px;
+  background-color: #388c01;
+  color: white;
 }
 
 .categorybox {

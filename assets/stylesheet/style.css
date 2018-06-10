@@ -1,17 +1,16 @@
-/* Generel HTML start */
-
+/* Generel HTML start. HTML der går igen over flere undersider. */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Arimo', sans-serif;
 }
-  p {
+
+p {
   font-size: 13px;
   font-family: 'Arimo', sans-serif;
 }
 
 h1 {
-  overflow: hidden;
   text-align: center;
   font-size: 23px;
   text-decoration: underline;
@@ -44,6 +43,7 @@ nav {
   width: 100%;
 }
 
+/* Float gør at links i Nav'en forbliver på højreside. */
 .navwrapper {
   float:right;
   display: flex;
@@ -68,25 +68,7 @@ li {
   color: white;
 }
 
-.dropdown {
-    position: relative;
-    z-index: 1;
-    margin-top: 26px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #388c01;
-    z-index: 1;
-    padding: 15px 22px 15px 8px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-  z-index: 1;
-}
-
+/* Hvid streg kommer under teksten når man holder musen over i Nav */
 .navhover:hover {
   text-decoration: underline;
 }
@@ -102,52 +84,88 @@ li {
 
 /* Index side start */
 
-.sectiontitle {
-  margin-left: 5%;
-}
-
-.sliderimg { display: block;
+/* Gemmer slider billederne over på hinanden, og skifter dem ud med javascript. */
+.sliderimg {
+  display: block;
   height: 70vh;
 }
 
-.sliderimg img { position:absolute;
+.sliderimg img {
+  position:absolute;
   display: block;
   transition: opacity 1s;
   opacity: 1; }
 
 .sliderimg img.hidden { opacity: 0; }
 
+
+/* Alle slider billeder er samme størrelse */
 .forsidebilleder {
   width: 100%;
   height: 70vh;
 }
+/* Højre/venstre pile til slider */
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40vh;
+  padding: 12px;
+  color: white;
+  border-radius: 10px;
+}
+
+.prev {
+  left: 0;
+  border: #388c01;
+}
+
+.next {
+  right: 0;
+  border: #388c01;
+}
+
+.prev:hover, .next:hover {
+  background-color: #388c01;
+  color: white;
+}
+
+/* Styling til tilbage til toppen knap. Gør den altid bliver i nederste venstre hjørne */
+#backtoTop {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: #388c01;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#backtoTop:hover {
+  background-color: grey;
+}
+
 
 .sealle {
-  color: black;
+  color: #388c01;
   margin-top: -5vh;
   margin-right: 6.5%;
   float:right;
+  font-weight: 600;
+}
+
+.sealle:hover {
   text-decoration: underline;
 }
 
+
 .infosection {
   display: flex;
-}
-
-.categorysection {
-  display: flex;
-}
-
-.category {
-  width: 20vh;
-  padding: 2vh 4vh;
-  margin: 3% 6%;
-  margin-right: auto;
-  background-color: #388c01;
-  color: white;
-  border: solid #388c01;
-  border-radius: 50px;
-  cursor: pointer;
 }
 
 .infobox {
@@ -166,6 +184,23 @@ li {
   padding-bottom: 3px;
 }
 
+.categorysection {
+  display: flex;
+}
+
+/* Kategoriknap */
+.category {
+  width: 20vh;
+  padding: 2vh 4vh;
+  margin: 3% 6%;
+  margin-right: auto;
+  background-color: #388c01;
+  color: white;
+  border: solid #388c01;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
 .categorybox {
   text-align: center;
   flex: 1;
@@ -177,6 +212,67 @@ li {
   text-decoration: none;
 }
 
+/* Modal content */
+.modalheader {
+    background-color: #388c01;
+    color: white;
+    margin-top: -10px;
+    text-align: center;
+    padding:10px;
+  }
+
+.datodeltagknap {
+    display: flex;
+  }
+
+#modaldeltag {
+  color: white;
+  background-color: #388c01;
+}
+
+#modaldeltag:hover {
+  text-decoration: underline;
+}
+
+/* Aktivering med javascript */
+#modalClick {
+  cursor: pointer;
+}
+
+.modalbillede {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    background-color: black;
+  }
+
+  .modalcontent {
+      background-color: #fafafa;
+      margin: auto;
+      width: 40%;
+      border-radius: 10px;
+  }
+
+  .modaltext {
+    padding: 15px 100px 50px 100px;
+  }
+/* Modal content slut */
+
+/* Selve modal bliver gemt med CSS og kommer frem vha. ID=modalClick i javascript*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 20px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+/* Begivenheds sektioner og begivenheds kasser. Alle har samme class. */
 .eventsection {
   display: flex;
 }
@@ -192,12 +288,9 @@ li {
   border-radius: 10px;
   margin: 15px 65px 15px 65px;
   text-align: center;
+  background-color: white;
 }
-
-.eventbox:hover {
-
-}
-
+/* Billedet på begivnhedskasserne */
 .billede {
   background-size: cover;
   width: 100%;
@@ -216,6 +309,14 @@ li {
   padding: 1px
 }
 
+/* Overskrifter til begivnhedssektioner */
+#musik, #udendors, #born, #food, #mostpopular {
+  margin-left: 6.4%;
+}
+/* Begivenhedssektioner slut */
+
+
+/* Margin og skiftende baggrundsfarver på forsiden. Start */
 .backgroundsection1 {
   padding-top: 1%;
   padding-bottom: 1%;
@@ -229,12 +330,6 @@ li {
   margin: 10px 120px 10px 120px;
 }
 
-#musik, #udendors, #born, #food, #mostpopular {
-  margin-left: 6.4%;
-}
-
-/*Index side slut */
-/*Back ground box*/
 .graybox {
   background-color: #ececec;
   padding: 10px 120px 10px 120px;
@@ -242,9 +337,15 @@ li {
 
 .whitebox {
   background-color: white;
-
   padding: 10px 120px 10px 120px;
 }
+
+/* Margin og skiftende baggrundsfarver på forsiden. Slut */
+
+/*Index side slut */
+
+
+
 /*Login css*/
 .logbox {
   border-style: solid;
@@ -354,7 +455,7 @@ li {
   margin-top: 8%;
 }
 
-#test {
+#editinformation {
   text-align: left;
   margin-left: 4%;
   font-size: 24px;
@@ -393,15 +494,15 @@ li {
   cursor: pointer;
 }
 
-.test30 {
+.bruger-wrapper {
   display: flex;
 }
 
-.test40 {
+.bruger-oprettet {
   flex: 1;
 }
 
-.test50 {
+.bruger-favorit {
   flex: 1;
 }
 
@@ -414,7 +515,9 @@ li {
   text-align: left;
   margin-left: 4%;
 }
-/*Deltag*/
+/* Bruger slut */
+
+/*Deltag start*/
 #fremskridt {
   width: 100px;
   height: 100px;
@@ -547,9 +650,9 @@ input[type="button"] {
   text-align: center;
   cursor: pointer;
 }
+/* Deltag slut */
 
 /*Opret af begivenhed*/
-
 .backgroundsection3 {
   background-color: white;
   padding-top: 1%;
@@ -621,122 +724,15 @@ input[type="button"] {
     justify-content: center;
 }
 
-.modalheader {
-    background-color: #388c01;
-    color: white;
-    margin-top: -10px;
-    text-align: center;
-    padding:10px;
-  }
-
-.datodeltagknap {
-    display: flex;
-  }
-
-#modaldeltag {
-  color: white;
-  background-color: #388c01;
-}
-
-#modaldeltag:hover {
-  text-decoration: underline;
-}
-
-.modalbillede {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 200px;
-    border-radius: 5px;
-    background-color: black;
-  }
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    border: 10px solid black;
-    padding-top: 20px;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.7);
-}
-
-
-.modalcontent {
-    background-color: #fafafa;
-    margin: auto;
-    width: 40%;
-    border-radius: 10px;
-}
-
-.modaltext {
-  padding: 15px 100px 50px 100px;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40vh;
-  padding: 12px;
-  color: white;
-  border-radius: 10px;
-}
-
-.prev {
-  left: 0;
-  border: #388c01;
-}
-
-.next {
-  right: 0;
-  border: #388c01;
-}
-
-.prev:hover, .next:hover {
-  background-color: #388c01;
-  color: white;
-}
-
-#test1 {
+#total {
   margin-top: -1vh;
   float: left;
 }
+/* Opret begivenheder slut */
 
-#modalClick {
-  cursor: pointer;
-}
-
+/* Favorit knap start */
 .far-fa-heart {
   cursor: pointer;
-}
-
-.test10 {
-  cursor: pointer;
-  background-color:none;
-  border: none;
-}
-
-#backtoTop {
-
-  position: fixed;
-  bottom: 50px;
-  right: 30px;
-  z-index: 99;
-  font-size: 14px;
-  border: none;
-  outline: none;
-  background-color: #388c01;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-#backtoTop:hover {
-  background-color: grey;
 }
 
 /*#favBtn {
@@ -780,3 +776,4 @@ input[type="button"] {
 #fav:checked+label>.fa-star {
   display: inline-block
 }
+/* Favorit knap slut */

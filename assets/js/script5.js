@@ -1,7 +1,4 @@
 /* Slider next/previous start */
-
-/*
-
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -19,12 +16,11 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";
 }
-
-*/
-
 /* Slider next/previous slut */
 
-/*window.onscroll = function() {scrollFunction()};
+
+/* Back to top knap start */
+window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 480 || document.documentElement.scrollTop > 480) {
@@ -39,7 +35,11 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-*/
+
+/* Back to top knap slut */
+
+/* Stjerne/favorit start */
+/*
 function fav() {
 var icon = document.getElementById("favIcon");
   if (icon.classList.contains("fa-star-o")) {
@@ -50,3 +50,6 @@ var icon = document.getElementById("favIcon");
     icon.classList.add("fa-star-o");
   }
 }
+
+*/
+/* Stjerne/favorit slut */

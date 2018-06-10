@@ -21,6 +21,7 @@
 
 <body>
 
+<!-- Navigation inklusiv links til alle undersider samt logo der viser til forsiden -->
   <nav>
     <a href="index.html"><img src="assets/images/vrogum.png" class="logo" alt="logo"></a>
     <div class="navwrapper">
@@ -33,9 +34,11 @@
     </div>
   </nav>
 
+
+  <!-- Tilbage til toppen knap. Dette er blot teksten. Funktioner og styling findes i css og javascript-->
   <button onclick="topFunction()" id="backtoTop" title="Go to top">Tilbage til<br> toppen</button>
 
-
+  <!-- Alle slider billeder. De har samme class og ligger over på hinanden i et div -->
   <section>
     <div class="sliderimg">
       <img class="forsidebilleder" src="assets/images/forsamlingshus.png" alt="forsamlingshus">
@@ -45,55 +48,53 @@
       <!-- Tallene nedenunder er html "unicode" som betyder < og > -->
       <button class="prev" onclick="plusDivs(-1)">&lt;</button>
       <button class="next" onclick="plusDivs(1)">&gt;</button>
-
   </section>
 
-  <div class="content_wrapper">
-
-    <div class="backgroundsection1, whitebox">
-      <h1>Din guide til booking og oprettelse af begivenheder</h1>
-      <section class="infosection">
-        <div class="infobox">
-          <h3 class="infoboxhead">Idéer til begivenheder</h3>
-          <p>Fødselsdage</p>
-          <p>Fodbold for sjov</p>
-          <p>Lan party</p>
-          <p>Fisketur</p>
-          <p>Foredrag</p>
-          <p>Vinsmagning </p>
-        </div>
-
-        <div class="infobox">
-          <h3 class="infoboxhead">Vil du deltage?<br> Sådan gør du..</h3>
-          <p>1. Find en interessant begivenhed</p>
-          <p>2. Tryk på begivenheden</p>
-          <p>3. Tryk på deltag</p>
-          <p>4. Udfyld de nødvendige informationer</p>
-        </div>
-
-        <div class="infobox">
-          <h3 class="infoboxhead">Andre smarte funktioner</h3>
-          <p>Under begivenheden, kan du trykke på hjertet. Den pågældende begivenhed bliver nu gemt i dine fortrukne under din profil, så du nemt kan finde den igen senere.</p>
-        </div>
-      </section>
+    <!-- Infobox. Backgroundsections beskriver hvilken farve baggrunden skal have -->
+  <div class="backgroundsection1, whitebox">
+    <h1>Din guide til booking og oprettelse af begivenheder</h1>
+  <section class="infosection">
+    <div class="infobox">
+      <h3 class="infoboxhead">Idéer til begivenheder</h3>
+        <p>Fødselsdage</p>
+        <p>Fodbold for sjov</p>
+        <p>Lan party</p>
+        <p>Fisketur</p>
+        <p>Foredrag</p>
+        <p>Vinsmagning </p>
     </div>
 
+    <div class="infobox">
+      <h3 class="infoboxhead">Vil du deltage?<br> Sådan gør du..</h3>
+      <p>1. Find en interessant begivenhed</p>
+      <p>2. Tryk på begivenheden</p>
+      <p>3. Tryk på deltag</p>
+      <p>4. Udfyld de nødvendige informationer</p>
+    </div>
 
+    <div class="infobox">
+      <h3 class="infoboxhead">Andre smarte funktioner</h3>
+      <p>Under begivenheden, kan du trykke på hjertet. Den pågældende begivenhed bliver nu gemt i dine fortrukne under din profil, så du nemt kan finde den igen senere.</p>
+    </div>
+  </section>
+  </div>
+
+  <!-- Kategoriknapperne. Bruger javascript til at finde et id for den sektion de skal hoppe ned til -->
     <div class="backgroundsection2, graybox">
       <h1>Hvad leder du efter?</h1>
       <section class="categorysection">
 
-          <button type="button" name="button" onclick="scrolldownM()" class="category">Musik</button>
+          <button type="button" onclick="scrolldownM()" class="category">Musik</button>
 
-          <button type="button" name="button" onclick="scrolldownU()" class="category">Udendørs</button>
+          <button type="button" onclick="scrolldownU()" class="category">Udendørs</button>
 
-          <button type="button" name="button" onclick="scrolldownO()" class="category">Børn og Unge</button>
+          <button type="button" onclick="scrolldownO()" class="category">Børn og Unge</button>
 
-          <button type="button" name="button" onclick="scrolldownF()" class="category">Mad og Drikke </button>
+          <button type="button" onclick="scrolldownF()" class="category">Mad og Drikke </button>
       </section>
     </div>
 
-
+    <!-- Modal start -->
     <div id="openModal" class="modal">
         <div class="modalcontent">
           <span class="lukmodal"></span>
@@ -120,12 +121,15 @@
           </aside>
         </div>
       </div>
+    <!-- Modal slut -->
 
+    <!-- Første sektion med begivendskasser. -->
     <div class="backgroundsection1, whitebox">
       <h3 id="mostpopular">Mest populære</h3>
       <a class="sealle" href="sealle.html">Se Alle</a>
 
       <section class="eventsection">
+        <!-- Begivenhedskasse start -->
         <div class="eventbox">
           <div id="modalClick">
           <img src="assets/images/gokart_50.jpg" alt="gokart" class="billede">
@@ -150,6 +154,7 @@
 
           <span  class="fas fa-heart"></span>
         </div>
+        <!-- Begivenhedskasse slut -->
 
 
         <div class="eventbox">
@@ -182,6 +187,7 @@
 
       </section>
     </div>
+    <!-- Første begivenhedssektion slut -->
 
 
     <div class="backgroundsection2, graybox">
@@ -353,8 +359,6 @@
         </div>
       </section>
     </div>
-
-  </div>
 <footer>
 <p>&copy; Copyright Vrøgum 2018 </p>
 </footer>

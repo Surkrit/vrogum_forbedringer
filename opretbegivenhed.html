@@ -17,42 +17,49 @@
 </head>
 
 <body>
-
   <nav>
     <a href="index.html"><img src="assets/images/vrogum.png" class="logo" alt="logo"></a>
     <div class="navwrapper">
       <ul>
         <li><a class="navhover" href="index.html">Forside</a></li>
         <li><a class="navhover" href="opretbegivenhed.html">Opret Begivenhed</a></li>
-        <li><a class="navhover" href="bruger.html">Profil</a></li>
-        <li><a class="navhover" href="login.html">Log ud</a></li>
-      </ul>
+        </ul>
+
+        <div class="dropdown">
+          <span>Bruger</span>
+          <div class="dropdown-content">
+            <a class="navhover" href="bruger.html">Profil<br></a><br>
+            <a class="navhover" href="#">Fortrukne<br></a><br>
+            <a class="navhover" href="login.html">Log ud</a>
+          </div>
+        </div>
+
     </div>
   </nav>
 
-    <h1 id="headline">Opret begivenhed</h1>
+    <div class="content_wrapper">
     <div class="backgroundsection3">
+    <h1 id="headline">Opret begivenhed</h1>
     <section class="infosection flexbetween" id="infoUser">
         <div id="firstStep">
-          <h5>Begivenhed</h5>
+          <h5>Titel</h3>
           <input type="text" id="beOv" class="sejt">
-          <h5>Arrangør</h5>
+          <h5>Arrangør</h3>
           <input type="text" id="beAr" class="sejt">
-          <h5>Adresse for arrangement</h5>
-          <input type="text" id="beAd" class="sejt">
-          <h5>Dato</h5>
-          <input type="date" id="beDato" class="sejt">
-          <h5>Tidspunkt</h5>
-          <input type="time" id="beTid" class="sejt">
+          <h5>Adresse</h3>
+          <input type="text" id="beAd" class="sejt"></input>
+          <h5>Dato</h3>
+          <input type="date" id="beTid" class="sejt"></input>
+          <h5>Tidspunkt</h3>
+          <input type="time" id="beDato" class="sejt">
       </div>
       <div id="secondstep">
-        <h5>Tilføj billede</h5>
+        <h5>f.eks. billede</h3>
         <input type="file" id="begivenhedsbillede"  class="sejt">
-        <h5>Beskrivelse af begivenheden</h5>
-        <textarea  id="beBe"  class="sejt">
-        </textarea>
+        <h5>Beskrivelse</h3>
+        <textarea  id="beBe"  class="sejt"></textarea>
         </div>
-        <button type="submit" id="opBe" value="create" onclick="opBegivenhed()">Opret</button>
+        <button type="submit" id="opBe" value="create" class="sejt" onclick="submitUserEvent()" >Opret</button>
   </section>
   </div>
   <div id="debatvisning" class="backgroundsection3"></div>
@@ -60,5 +67,6 @@
   <footer>
     <p>&copy; Copyright Vrøgum 2018 </p>
   </footer>
+    <script src="assets/js/begivenhed.js"></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
     <h1>Din guide til booking og oprettelse af begivenheder</h1>
   <section class="infosection">
     <div class="infobox">
-      <h3 class="infoboxhead">Idéer til begivenheder</h3>
+      <h3 class="infoboxhead">Idéer til <br> begivenheder</h3>
         <p>Fødselsdage</p>
         <p>Fodbold for sjov</p>
         <p>Lan party</p>
@@ -73,8 +73,8 @@
     </div>
 
     <div class="infobox">
-      <h3 class="infoboxhead">Andre smarte funktioner</h3>
-      <p>Under begivenheden, kan du trykke på hjertet. Den pågældende begivenhed bliver nu gemt i dine fortrukne under din profil, så du nemt kan finde den igen senere.</p>
+      <h3 class="infoboxhead">Andre smarte<br> funktioner</h3>
+      <p>Under begivenheden, kan du trykke på stjernen.<br><br> Den pågældende begivenhed bliver nu gemt i dine fortrukne under din profil, så du nemt kan finde den igen senere.</p>
     </div>
   </section>
   </div>
@@ -124,6 +124,7 @@
     <!-- Modal slut -->
 
     <!-- Første sektion med begivendskasser. -->
+    <h1>Eller udforsk selv</h1>
     <div class="backgroundsection1, whitebox">
       <h3 id="mostpopular">Mest populære</h3>
       <a class="sealle" href="sealle.html">Se Alle</a>
@@ -137,22 +138,14 @@
             <h3>Lokums ræs</h3>
             </div>
             <p>LokumsRæs er en super skæg aktivitet, hvor alle kan deltage.
-            Der køres om kap på de elektriske toiletter…</p>
+            Der køres om kap på de elektriske toiletter…<br><br></p>
             <p class="adresse">Stationsvej 6, Oksbøl</p>
-            <p>Dato: 23 Juni</p>
+            <p class="datobund">Dato: 23 Juni</p>
           </div>
 
-          <button id="favBtn" onclick="fav()">
-            <i id="favIcon" class="fa fa-star-o">  </i>
+          <button class="favBtn" onclick="fav()">
+            <i id="favIcon" class="fa fa-star-o"></i>
           </button>
-
-          <input id='fav' type='checkbox'>
-          <label for='fav'>
-            <i class="fa fa-star-o"></i>
-            <i class="fa fa-star"></i>
-          </label>
-
-          <span  class="fas fa-heart"></span>
         </div>
         <!-- Begivenhedskasse slut -->
 
@@ -165,11 +158,10 @@
             </div>
             <p>Spontant og grænseløst og med et væld af inspirationer udforsker Dad to the bone det musikalske grænseland og koncerterne besidder…</p>
             <p class="adresse">Fiilsøvej 30, Oksbøl</p>
-            <p>Dato: 23 Juni</p>
-
+            <p class="datobund">Dato: 28 Juni</p>
           </div>
-          <button id="favBtn" onclick="fav()">
-          <i id="favIcon" class="fa fa-star-o">  </i>
+          <button class="favBtn" onclick="fav1()">
+          <i id="favIcon1" class="fa fa-star-o">  </i>
           </button>
         </div>
 
@@ -179,10 +171,13 @@
           <div class="eventtext">
           <h3>Vin smagning</h3>
           </div>
-          <p>Der findes et hav af forskellige stilarter indenfor vin, hvor både lagring og alder har stort betydning for…</p>
+          <p>Der findes et hav af forskellige stilarter indenfor vin, hvor både lagring og alder har stort betydning for…<br><br></p>
           <p class="adresse">Fiilsøvej 30, Oksbøl</p>
-          <p>Dato: 23 Juni</p>
+          <p class="datobund">Dato: 12 Juni</p>
         </div>
+        <button class="favBtn" onclick="fav2()">
+        <i id="favIcon2" class="fa fa-star-o">  </i>
+        </button>
         </div>
 
       </section>
@@ -202,8 +197,11 @@
             </div>
             <p>Spontant og grænseløst og med et væld af inspirationer udforsker Dad to the bone det musikalske grænseland og koncerterne besidder…</p>
             <p class="adresse">Fiilsøvej 30, Oksbøl</p>
-          <p>Dato: 23 Juni</p>
+          <p class="datobund">Dato: 28 Juni</p>
         </div>
+        <button class="favBtn" onclick="fav3()">
+        <i id="favIcon3" class="fa fa-star-o">  </i>
+        </button>
       </div>
 
         <div class="eventbox">
@@ -215,8 +213,11 @@
             <p>Vi får besøg af den skotske duo The Mercenary Fiddler Duo, der består af Elsa Jean McTaggart og Gary Lister. Elsa er en fremragende..<br><br></p>
 
             <p class="adresse">Hedelundsvej 15, Vrøgum </p>
-          <p>Dato: 23 Juni</p>
+          <p class="datobund">Dato: 30 Maj</p>
         </div>
+        <button class="favBtn" onclick="fav4()">
+        <i id="favIcon4" class="fa fa-star-o">  </i>
+        </button>
         </div>
 
         <div class="eventbox">
@@ -228,8 +229,11 @@
             <p>Flamenco er en musikalsk tradition i Andalusien. I takt med guitarens popularitet i 50- og 60’erne bliver flamenco fremført solo på…<br><br></p>
 
             <p class="adresse">Hedelundsvej 15, Vrøgum</p>
-          <p>Dato: 23 Juni</p>
+          <p class="datobund">Dato: 1 Juli</p>
         </div>
+        <button class="favBtn" onclick="fav5()">
+        <i id="favIcon5" class="fa fa-star-o">  </i>
+        </button>
         </div>
       </section>
     </div>
@@ -237,17 +241,21 @@
     <div class="backgroundsection1, whitebox">
       <h3 id="udendors">Udendørs</h3>
       <a class="sealle" href="sealle.html">Se Alle</a>
+
       <section class="eventsection">
         <div class="eventbox">
           <div id="modalClick6">
-          <img src="assets/images/placeholder2_50.jpg" alt="vrøgum" class="billede">
+          <img src="assets/images/skovlob.png" alt="vrøgum" class="billede">
           <div class="eventtext">
             <h3>Vrøgum løbet</h3>
           </div>
-            <p>Spændende rute udviklet i samarbejde med Det Danske Forsvar og Oksbøl lejren. Detal i den ultimative udfordring der får fra…<br><br><br></p>
+            <p>Spændende rute udviklet i samarbejde med Det Danske Forsvar og Oksbøl lejren. Detal i den ultimative udfordring der får fra…</p>
             <p class="adresse">Egevej 15, Oksbøl</p>
-          <p>Dato: 23 Juni</p>
+          <p class="datobund">Dato: 25 Maj</p>
         </div>
+        <button class="favBtn" onclick="fav6()">
+        <i id="favIcon6" class="fa fa-star-o">  </i>
+        </button>
         </div>
 
         <div class="eventbox">
@@ -258,8 +266,11 @@
             </div>
             <p>Vrøgum Fiskesø gør meget for lystfiskernes komfort. Du kan blandt andet grille, der er borde bænke og overdækket spiseplads. Toilet…<br></p>
             <p class="adresse">Hedelundsvej 15, Vrøgum </p>
-          <p>Dato: 23 Juni</p>
+          <p class="datobund">Dato: 1 Juli</p>
         </div>
+        <button class="favBtn" onclick="fav7()">
+        <i id="favIcon7" class="fa fa-star-o">  </i>
+        </button>
         </div>
 
         <div class="eventbox">
@@ -270,8 +281,11 @@
             </div>
             <p>Gå en tur sammen med dine naboer og venner, i den smukke natur i Vrøgum. Vi har en helt execeptionel natur som…</p>
             <p class="adresse">Hedelundsvej 15, Vrøgum </p>
-          <p>Dato: 23 Juni</p>
+          <p class="datobund">Dato: 2 Juni</p>
         </div>
+        <button class="favBtn" onclick="fav8()">
+        <i id="favIcon8" class="fa fa-star-o">  </i>
+        </button>
         </div>
       </section>
     </div>
@@ -289,8 +303,11 @@
           </div>
             <p>Vi mødes hjemme ved mig, og sætter alles computere op. Jeg tænker vi spiller Fortnite og andre sjove spil? Jeg står for lidt mad og noget drikke til natten..</p>
             <p class="adresse">Bygmarken 4, Oksbøl </p>
-          <p>Dato: 23 Juni</p>
+          <p class="datobund">Dato: 23-24 Juni</p>
           </div>
+          <button class="favBtn" onclick="fav9()">
+          <i id="favIcon9" class="fa fa-star-o">  </i>
+          </button>
         </div>
 
         <div class="eventbox">
@@ -301,8 +318,11 @@
             </div>
             <p>Jeg vil godt invitere jer ned og spille en omgang fodbold. Det er bare for sjov, og synes det kunne være hyggeligt hvis..<br><br></p>
             <p class="adresse">Sportspladsen, Vrøgum </p>
-          <p>Dato: 23 Juni</p>
+          <p class="datobund">Dato: 30 Juni</p>
         </div>
+        <button class="favBtn" onclick="fav10()">
+        <i id="favIcon10" class="fa fa-star-o">  </i>
+        </button>
         </div>
 
         <div class="eventbox"> <div id="modalClick11">
@@ -312,8 +332,11 @@
             </div>
             <p>Nu skal vi snart til eksamen, og i den forbindelse tænker jeg vi kunne mødes og hjælpe hinanden lidt. Jeg har booket kulturhuset..<br><br></p>
             <p class="adresse">Hedelundsvej 15, Vrøgum </p>
-          <p>Dato: 23 Juni</p>
+          <p class="datobund">Dato: 11 Juni</p>
         </div>
+        <button class="favBtn" onclick="fav11()">
+        <i id="favIcon11" class="fa fa-star-o">  </i>
+        </button>
         </div>
       </section>
     </div>
@@ -330,8 +353,11 @@
             </div>
             <p>Der findes et hav af forskellige stilarter indenfor vin, hvor både lagring og alder har stort betydning for…<br><br></p>
             <p class="adresse">Fiilsøvej 30, Oksbøl</p>
-          <p>Dato: 23 Juni</p>
+          <p class="datobund">Dato: 12 Juni</p>
         </div>
+        <button class="favBtn" onclick="fav12()">
+        <i id="favIcon12" class="fa fa-star-o">  </i>
+        </button>
         </div>
 
         <div class="eventbox"> <div id="modalClick13">
@@ -342,8 +368,11 @@
             <p>Vi gentager succesen fra sidste måned, og laver en fællessspisnings aften. Det bliver ved ballonparken, da vejret ser ud til at holde. Alle medbringer en form for...</p>
 
             <p class="adresse">Egevej 15, Oksbøl</p>
-          <p>Dato: 23 Juni</p>
+          <p class="datobund">Dato: 14 Juli</p>
         </div>
+        <button class="favBtn" onclick="fav13()">
+        <i id="favIcon13" class="fa fa-star-o">  </i>
+        </button>
         </div>
 
         <div class="eventbox"> <div id="modalClick14">
@@ -354,8 +383,11 @@
             <p>Jeg har booket et foredrag med Jesper Koch, måske bedst kendt for sin medvirken i tv3 programmet “masterchef”. Dette er en unik mulighed...</p>
 
             <p class="adresse">Hedelundsvej 15, Vrøgum </p>
-          <p>Dato: 23 Juni</p>
+          <p class="datobund">Dato: 1 August</p>
         </div>
+        <button class="favBtn" onclick="fav14()">
+        <i id="favIcon14" class="fa fa-star-o"></i>
+        </button>
         </div>
       </section>
     </div>
@@ -367,5 +399,5 @@
 <script src="assets/js/script3.js"></script>
 <script src="assets/js/script4.js"></script>
 <script src="assets/js/script5.js"></script>
-  </body>
+</body>
 </html>

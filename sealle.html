@@ -12,6 +12,7 @@
   <link rel="shortcut icon" type="image/png" href="assets/images/vrogum.png">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
 
   <title>Allebegivenheder</title>
 </head>
@@ -29,14 +30,17 @@
       </div>
     </nav>
 
+    <!-- Modal start -->
     <div id="openModal" class="modal">
         <div class="modalcontent">
           <span class="lukmodal"></span>
-          <img src="assets/images/gokart.jpg" class="modalbillede" alt="gokart">
+          <img src="assets/images/gokart_50.jpg" class="modalbillede" alt="gokart">
           <article class="modalheader">
-            <p>23 Juni 2018 kl. 13:00</p>
-            <p>Stationsvej 6, Oksbøl</p>
-            <p>Karsten Knudsen</p>
+
+            <p>Telefon: +45 12 34 56 78</p>
+            <p>Adresse: Stationsvej 6, Oksbøl</p>
+            <p>Tidspunkt: 23 Juni 2018 kl. 13:00</p>
+            <p>Arrangør: Karsten Knudsen</p>
             <a href="deltag.html" id="modaldeltag">Deltag</a>
           </article>
 
@@ -53,192 +57,264 @@
           </aside>
         </div>
       </div>
+    <!-- Modal slut -->
 
     <h1>Alle begivenheder</h1>
-    <div class="backgroundsection1">
-    <section class="eventsection">
-      <div class="eventbox">
-        <img src="assets/images/gokart.jpg" alt="ræs" class="billede">
-        <div class="eventtext">
-        <h3>Lokums Ræs</h3>
-        <p>LokumsRæs er en super skæg aktivitet, hvor alle kan deltage.
-        Der køres om kap på de elektriske toiletter…<br><br></p>
+    <div class="backgroundsection1, whitebox">
+
+
+      <section class="eventsection">
+        <!-- Begivenhedskasse start -->
+        <div class="eventbox">
+          <div id="modalClick">
+          <img src="assets/images/gokart_50.jpg" alt="gokart" class="billede">
+            <div class="eventtext">
+            <h3>Lokums ræs</h3>
+            </div>
+            <p>LokumsRæs er en super skæg aktivitet, hvor alle kan deltage.
+            Der køres om kap på de elektriske toiletter…<br><br></p>
+            <p class="adresse">Stationsvej 6, Oksbøl</p>
+            <p class="datobund">Dato: 23 Juni</p>
+          </div>
+
+          <button class="favBtn" onclick="fav()">
+            <i id="favIcon" class="fa fa-star-o"></i>
+          </button>
         </div>
-        <div class="locationpin">
-        <i class="material-icons" style="font-size:36px">place</i>
-        <p class="adresse">Stationsvej 6, Oksbøl</p>
+        <!-- Begivenhedskasse slut -->
+
+        <div class="eventbox"> <div id="modalClick14">
+          <img src="assets/images/foredrag_50.jpg" alt="foredrag" class="billede">
+          <div class="eventtext">
+            <h3>Foredrag v/ Jesper Koch</h3>
+            </div>
+            <p>Jeg har booket et foredrag med Jesper Koch, måske bedst kendt for sin medvirken i tv3 programmet “masterchef”. Dette er en unik mulighed...</p>
+
+            <p class="adresse">Hedelundsvej 15, Vrøgum </p>
+          <p class="datobund">Dato: 1 August</p>
         </div>
-        <p>Sport</p>
-      </div>
-
-      <div class="eventbox">
-        <img src="assets/images/dadtothebone.jpg" alt="band" class="billede">
-        <div class="eventtext">
-        <h3>Dad to the bone</h3>
-        <p>Spontant og grænseløst og med et væld af inspirationer udforsker Dad to the bone det musikalske grænseland og koncerterne besidder…</p>
+        <button class="favBtn" onclick="fav14()">
+        <i id="favIcon14" class="fa fa-star-o"></i>
+        </button>
         </div>
-        <div class="locationpin">
-        <i class="material-icons" style="font-size:36px">place</i>
-        <p class="adresse">Stationsvej 6, Oksbøl</p>
+
+
+        <div class="eventbox">
+          <div id="modalClick2">
+          <img src="assets/images/mad_50.jpg" alt="vin" class="billede">
+          <div class="eventtext">
+          <h3>Vin smagning</h3>
+          </div>
+          <p>Der findes et hav af forskellige stilarter indenfor vin, hvor både lagring og alder har stort betydning for…<br><br></p>
+          <p class="adresse">Fiilsøvej 30, Oksbøl</p>
+          <p class="datobund">Dato: 12 Juni</p>
         </div>
-        <p>Musik</p>
-      </div>
-
-      <div class="eventbox">
-        <img src="assets/images/lektiecafe.jpg" alt="lektier" class="billede">
-        <div class="eventtext">
-        <h3>Lektie café</h3>
-        <p>Nu skal vi snart til eksamen, og i den forbindelse tænker jeg vi kunne mødes og hjælpe hinanden lidt. Jeg har booket kulturhuset..<br><br></p>
+        <button class="favBtn" onclick="fav2()">
+        <i id="favIcon2" class="fa fa-star-o">  </i>
+        </button>
         </div>
-        <div class="locationpin">
-        <i class="material-icons" style="font-size:36px">place</i>
-        <p class="adresse">Hedelundsvej 15, Vrøgum </p>
+
+      </section>
+    </div>
+    <!-- Første begivenhedssektion slut -->
+
+
+    <div class="backgroundsection2, graybox">
+
+      <section class="eventsection">
+        <div class="eventbox">
+          <div id="modalClick3">
+          <img src="assets/images/dadtothebone_50.jpg" alt="band" class="billede">
+          <div class="eventtext">
+            <h3>Dad to the bone</h3>
+            </div>
+            <p>Spontant og grænseløst og med et væld af inspirationer udforsker Dad to the bone det musikalske grænseland og koncerterne besidder…</p>
+            <p class="adresse">Fiilsøvej 30, Oksbøl</p>
+          <p class="datobund">Dato: 28 Juni</p>
         </div>
-        <p>Børn og unge</p>
+        <button class="favBtn" onclick="fav3()">
+        <i id="favIcon3" class="fa fa-star-o">  </i>
+        </button>
       </div>
-  </section>
-  </div>
+
+        <div class="eventbox">
+          <div id="modalClick4">
+          <img src="assets/images/skotskduo_50.jpg" alt="Skotsk" class="billede">
+          <div class="eventtext">
+            <h3>Skotsk duo</h3>
+            </div>
+            <p>Vi får besøg af den skotske duo The Mercenary Fiddler Duo, der består af Elsa Jean McTaggart og Gary Lister. Elsa er en fremragende..<br><br></p>
+
+            <p class="adresse">Hedelundsvej 15, Vrøgum </p>
+          <p class="datobund">Dato: 30 Maj</p>
+        </div>
+        <button class="favBtn" onclick="fav4()">
+        <i id="favIcon4" class="fa fa-star-o">  </i>
+        </button>
+        </div>
+
+        <div class="eventbox">
+          <div id="modalClick5">
+          <img src="assets/images/flamenco_50.jpg" alt="flamenco" class="billede">
+          <div class="eventtext">
+            <h3>Flamenco</h3>
+          </div>
+            <p>Flamenco er en musikalsk tradition i Andalusien. I takt med guitarens popularitet i 50- og 60’erne bliver flamenco fremført solo på…<br><br></p>
+
+            <p class="adresse">Hedelundsvej 15, Vrøgum</p>
+          <p class="datobund">Dato: 1 Juli</p>
+        </div>
+        <button class="favBtn" onclick="fav5()">
+        <i id="favIcon5" class="fa fa-star-o">  </i>
+        </button>
+        </div>
+      </section>
+    </div>
+
+    <div class="backgroundsection1, whitebox">
 
 
-  <div class="backgroundsection2">
-  <section class="eventsection">
+      <section class="eventsection">
+        <div class="eventbox">
+          <div id="modalClick6">
+          <img src="assets/images/skovlob.png" alt="vrøgum" class="billede">
+          <div class="eventtext">
+            <h3>Vrøgum løbet</h3>
+          </div>
+            <p>Spændende rute udviklet i samarbejde med Det Danske Forsvar og Oksbøl lejren. Detal i den ultimative udfordring der får fra…</p>
+            <p class="adresse">Egevej 15, Oksbøl</p>
+          <p class="datobund">Dato: 25 Maj</p>
+        </div>
+        <button class="favBtn" onclick="fav6()">
+        <i id="favIcon6" class="fa fa-star-o">  </i>
+        </button>
+        </div>
 
-    <div class="eventbox">
-      <img src="assets/images/lan.jpg" alt="lan" class="billede">
-      <div class="eventtext">
-      <h3>Lan party</h3>
-      <p>Vi mødes hjemme ved mig, og sætter alles computere op. Jeg tænker vi spiller Fortnite og andre sjove spil? Jeg står for lidt mad og noget drikke til natten..</p>
-      </div>
-      <div class="locationpin">
-      <i class="material-icons" style="font-size:36px">place</i>
-      <p class="adresse">Bygmarken 4, Oksbøl  </p>
-      </div>
-      <p>Børn og unge</p>
+        <div class="eventbox">
+        <div id="modalClick7">
+          <img src="assets/images/putntake_50.jpg" alt="fiske" class="billede">
+          <div class="eventtext">
+            <h3>Put and Take</h3>
+            </div>
+            <p>Vrøgum Fiskesø gør meget for lystfiskernes komfort. Du kan blandt andet grille, der er borde bænke og overdækket spiseplads. Toilet…<br></p>
+            <p class="adresse">Hedelundsvej 15, Vrøgum </p>
+          <p class="datobund">Dato: 1 Juli</p>
+        </div>
+        <button class="favBtn" onclick="fav7()">
+        <i id="favIcon7" class="fa fa-star-o">  </i>
+        </button>
+        </div>
+
+        <div class="eventbox">
+        <div id="modalClick8">
+          <img src="assets/images/udidetblaa_50.jpg" alt="natur" class="billede">
+          <div class="eventtext">
+            <h3>Ud i det blå</h3>
+            </div>
+            <p>Gå en tur sammen med dine naboer og venner, i den smukke natur i Vrøgum. Vi har en helt execeptionel natur som…</p>
+            <p class="adresse">Hedelundsvej 15, Vrøgum </p>
+          <p class="datobund">Dato: 2 Juni</p>
+        </div>
+        <button class="favBtn" onclick="fav8()">
+        <i id="favIcon8" class="fa fa-star-o">  </i>
+        </button>
+        </div>
+      </section>
+    </div>
+
+    <div class="backgroundsection1, graybox">
+
+
+      <section class="eventsection">
+        <div class="eventbox">
+        <div id="modalClick9">
+          <img src="assets/images/lan_50.jpg" alt="lan" class="billede">
+          <div class="eventtext">
+            <h3>Lan party</h3>
+          </div>
+            <p>Vi mødes hjemme ved mig, og sætter alles computere op. Jeg tænker vi spiller Fortnite og andre sjove spil? Jeg står for lidt mad og noget drikke til natten..</p>
+            <p class="adresse">Bygmarken 4, Oksbøl </p>
+          <p class="datobund">Dato: 23-24 Juni</p>
+          </div>
+          <button class="favBtn" onclick="fav9()">
+          <i id="favIcon9" class="fa fa-star-o">  </i>
+          </button>
+        </div>
+
+        <div class="eventbox">
+        <div id="modalClick10">
+          <img src="assets/images/fodbold_50.jpg" alt="bold" class="billede">
+          <div class="eventtext">
+            <h3>Fodbold</h3>
+            </div>
+            <p>Jeg vil godt invitere jer ned og spille en omgang fodbold. Det er bare for sjov, og synes det kunne være hyggeligt hvis..<br><br></p>
+            <p class="adresse">Sportspladsen, Vrøgum </p>
+          <p class="datobund">Dato: 30 Juni</p>
+        </div>
+        <button class="favBtn" onclick="fav10()">
+        <i id="favIcon10" class="fa fa-star-o">  </i>
+        </button>
+        </div>
+
+        <div class="eventbox"> <div id="modalClick11">
+          <img src="assets/images/lektiecafe_50.jpg" alt="lektie" class="billede">
+          <div class="eventtext">
+            <h3>Lektie café</h3>
+            </div>
+            <p>Nu skal vi snart til eksamen, og i den forbindelse tænker jeg vi kunne mødes og hjælpe hinanden lidt. Jeg har booket kulturhuset..<br><br></p>
+            <p class="adresse">Hedelundsvej 15, Vrøgum </p>
+          <p class="datobund">Dato: 11 Juni</p>
+        </div>
+        <button class="favBtn" onclick="fav11()">
+        <i id="favIcon11" class="fa fa-star-o">  </i>
+        </button>
+        </div>
+      </section>
     </div>
 
 
-    <div class="eventbox">
-      <img src="assets/images/skotskduo.jpg" alt="Skotsk" class="billede">
-      <div class="eventtext">
-      <h3>Skotsk duo</h3>
-      <p>Vi får besøg af den skotske duo The Mercenary Fiddler Duo, der består af Elsa Jean McTaggart og Gary Lister. Elsa er en fremragende..<br><br></p>
-      </div>
-      <div class="locationpin">
-      <i class="material-icons" style="font-size:36px">place</i>
-      <p class="adresse">Hedelundsvej 15, Vrøgum </p>
-      </div>
-      <p>Musik</p>
-    </div>
+    <div class="backgroundsection2, whitebox">
 
-    <div class="eventbox">
-      <img src="assets/images/flamenco.jpg" alt="flamenco" class="billede">
-      <div class="eventtext">
-      <h3>Flamenco</h3>
-      <p>Flamenco er en musikalsk tradition i Andalusien. I takt med guitarens popularitet i 50- og 60’erne bliver flamenco fremført solo på…<br><br></p>
-      </div>
-      <div class="locationpin">
-      <i class="material-icons" style="font-size:36px">place</i>
-      <p class="adresse">Hedelundsvej 15, Vrøgum</p>
-      </div>
-      <p>Musik</p>
-    </div>
-</section>
+      <section class="eventsection">
+        <div class="eventbox"> <div id="modalClick12">
+          <img src="assets/images/mad_50.jpg" alt="vin" class="billede">
+          <div class="eventtext">
+            <h3>Vin smagning</h3>
+            </div>
+            <p>Der findes et hav af forskellige stilarter indenfor vin, hvor både lagring og alder har stort betydning for…<br><br></p>
+            <p class="adresse">Fiilsøvej 30, Oksbøl</p>
+          <p class="datobund">Dato: 12 Juni</p>
+        </div>
+        <button class="favBtn" onclick="fav12()">
+        <i id="favIcon12" class="fa fa-star-o">  </i>
+        </button>
+        </div>
 
-</div>
+        <div class="eventbox"> <div id="modalClick13">
+          <img src="assets/images/spisning_50.jpg" alt="fællesspisning" class="billede">
+          <div class="eventtext">
+            <h3>Fælles spisning</h3>
+            </div>
+            <p>Vi gentager succesen fra sidste måned, og laver en fællessspisnings aften. Det bliver ved ballonparken, da vejret ser ud til at holde. Alle medbringer en form for...</p>
 
-<div class="backgroundsection1">
-<section class="eventsection">
-  <div class="eventbox">
-    <img src="assets/images/placeholder2.jpg" alt="løb" class="billede">
-    <div class="eventtext">
-    <h3>Vrøgum løbet</h3>
-    <p>Spændende rute udviklet i samarbejde med Det Danske Forsvar og Oksbøl lejren. Detal i den ultimative udfordring der får fra…<br><br><br><br></p>
-    </div>
-    <div class="locationpin">
-    <i class="material-icons" style="font-size:36px">place</i>
-    <p class="adresse">Egevej 15, Oksbøl</p>
-    </div>
-    <p>Sport</p>
-  </div>
+            <p class="adresse">Egevej 15, Oksbøl</p>
+          <p class="datobund">Dato: 14 Juli</p>
+        </div>
+        <button class="favBtn" onclick="fav13()">
+        <i id="favIcon13" class="fa fa-star-o">  </i>
+        </button>
+        </div>
 
-  <div class="eventbox">
-    <img src="assets/images/putntake.jpg" alt="fiske" class="billede">
-    <div class="eventtext">
-    <h3>Put and Take</h3>
-    <p>Vrøgum Fiskesø gør meget for lystfiskernes komfort. Du kan blandt andet grille, der er borde bænke og overdækket spiseplads. Toilet…<br></p>
-    </div>
-    <div class="locationpin">
-    <i class="material-icons" style="font-size:36px">place</i>
-    <p class="adresse">Hedelundsvej 15, Vrøgum </p>
-    </div>
-    <p>Udendørs</p>
-  </div>
 
-  <div class="eventbox">
-    <img src="assets/images/udidetblaa.jpg" alt="natur" class="billede">
-    <div class="eventtext">
-    <h3>Ud i det blå</h3>
-    <p>Gå en tur sammen med dine naboer og venner, i den smukke natur i Vrøgum. Vi har en helt execeptionel natur som…<br><br></p>
+      </section>
     </div>
-    <div class="locationpin">
-    <i class="material-icons" style="font-size:36px">place</i>
-    <p class="adresse">Hedelundsvej 15, Vrøgum </p>
-    </div>
-    <p>Udendørs</p>
-  </div>
-</section>
-</div>
-
-<div class="backgroundsection2">
-<section class="eventsection">
-  <div class="eventbox">
-    <img src="assets/images/mad.jpg" alt="vin" class="billede">
-    <div class="eventtext">
-    <h3>Vin smagning</h3>
-    <p>Der findes et hav af forskellige stilarter indenfor vin, hvor både lagring og alder har stort betydning for…<br><br></p>
-    </div>
-    <div class="locationpin">
-    <i class="material-icons" style="font-size:36px">place</i>
-    <p class="adresse">Fiilsøvej 30, Oksbøl</p>
-    </div>
-    <p>Mad og drikke</p>
-  </div>
-
-  <div class="eventbox">
-    <img src="assets/images/spisning.jpg" alt="fællesspisning" class="billede">
-    <div class="eventtext">
-    <h3>Fælles spisning</h3>
-    <p>Vi gentager succesen fra sidste måned, og laver en fællessspisnings aften. Det bliver ved ballonparken, da vejret ser ud til at holde. Alle medbringer en form for...</p>
-    </div>
-    <div class="locationpin">
-    <i class="material-icons" style="font-size:36px">place</i>
-    <p class="adresse">Egevej 15, Oksbøl</p>
-    </div>
-    <p>Mad og drikke</p>
-  </div>
-
-  <div class="eventbox">
-    <img src="assets/images/foredrag.jpg" alt="foredrag" class="billede">
-    <div class="eventtext">
-    <h3>Foredrag v/ Jesper Koch</h3>
-    <p>Jeg har booket et foredrag med Jesper Koch, måske bedst kendt for sin medvirken i tv3 programmet “masterchef”. Dette er en unik mulighed...</p>
-    </div>
-    <div class="locationpin">
-    <i class="material-icons" style="font-size:36px">place</i>
-    <p class="adresse">Hedelundsvej 15, Vrøgum </p>
-    </div>
-    <p>Mad og Drikke</p>
-  </div>
-</section>
-</div>
-
-<footer>
-<p>&copy; Copyright Vrøgum 2018 </p>
-</footer>
-<script src="assets/javascript/script.js"></script>
-<script src="assets/javascript/script2.js"></script>
-<script src="assets/javascript/script3.js"></script>
-<script src="assets/javascript/script4.js"></script>
-
+  <footer>
+  <p>&copy; Copyright Vrøgum 2018 </p>
+  </footer>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script2.js"></script>
+  <script src="assets/js/script3.js"></script>
+  <script src="assets/js/script4.js"></script>
+  <script src="assets/js/script5.js"></script>
   </body>
-</html>
+  </html>

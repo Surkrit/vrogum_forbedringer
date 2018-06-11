@@ -23,23 +23,15 @@
       <ul>
         <li><a class="navhover" href="index.html">Forside</a></li>
         <li><a class="navhover" href="opretbegivenhed.html">Opret Begivenhed</a></li>
-        </ul>
-
-        <div class="dropdown">
-          <span>Bruger</span>
-          <div class="dropdown-content">
-            <a class="navhover" href="bruger.html">Profil<br></a><br>
-            <a class="navhover" href="#">Fortrukne<br></a><br>
-            <a class="navhover" href="login.html">Log ud</a>
-          </div>
-        </div>
-
+        <li><a class="navhover" href="bruger.html">Profil</a></li>
+        <li><a class="navhover" href="login.html">Log ud</a></li>
+      </ul>
     </div>
   </nav>
 
   <h1 id="placeholder">Din profil</h1>
   <section class="formsection">
-    <h2 id="test">Rediger dine information</h2>
+    <h2 id="editinformation">Rediger dine information</h2>
     <form name="rediger" method="post">
       <input id="navn" type="text" placeholder="Navn">
       <input id="email" type="text" placeholder="Email">
@@ -48,10 +40,8 @@
     <button id="opdater"><a href="bruger.html">Opdater</a></button>
   </section>
 
-  <div class="test30">
-
-
-    <article class="test40">
+  <div class="bruger-wrapper">
+    <article class="bruger-oprettet">
       <h2 id="selvoprettet">Begivenheder jeg har oprettet</h2>
       <div class="eventbox">
         <div id="modalClick">
@@ -66,7 +56,7 @@
         </div>
       </div>
     </article>
-    <aside class="test50">
+    <aside class="bruger-favorit">
       <h2 id="fortrukne">Fortrukne</h2>
     </aside>
 </div>

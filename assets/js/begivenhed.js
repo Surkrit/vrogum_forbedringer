@@ -16,23 +16,26 @@ function opBegivenhed(overSkrift, arrangør, adresse, tid, dato, beskrivelse) {
 }*/
 var infoUser = document.querySelector("#infoUser");
 
-function setLocal(localUser)
+function setLocal(localUser) //noget vi gerne vil gemme
 {
   var jsonUser = JSON.stringify(localUser);
 
   localStorage.setItem("user", jsonUser);
+  //nu kan vi gemme vores noter
 }
 
 function getLocal()
 {
   var user = localStorage.getItem("user");
-
+// vi vil gerne hente det array der er inde i notes
   if(user == null)
   {
     return [];
+    //hvis der ikke er nogen array i notes, så er det bare tomt
   }
   else {
     return JSON.parse(user);
+    //JSON laver det om til javascript
   }
 }
 
@@ -40,7 +43,7 @@ function submitUser(overSkrift, arrangør, adresse, tid, dato, beskrivelse)
 {
   var origUser = getLocal();
 
-  var newUser = {
+  var newUser = { //denne variabel opbevarer bare data
     overSkrift:   overSkrift,
     arrangør:     arrangør,
     adresse:      adresse,
@@ -50,17 +53,23 @@ function submitUser(overSkrift, arrangør, adresse, tid, dato, beskrivelse)
   };
 
   origUser.push(newUser);
+  //tilføjelse newNote ind på arrayet
 
   setLocal(origUser);
+  //vi har testet origNotes og nu vil vi sætte det ind på setLocal
 }
 /*bygger den fysiske liste som bliver vist*/
 function buildList() {
   var dataList = getLocal();
+  //Nu ved ved den hvor den skal hente notelisten
   var ulElm = document.querySelector("ul");
+  //for at kalde på et html element - vi kalder på ul(listen)
 
   ulElm.innerHTML ="";
+  //så den ikke tilføjer hele listen igen når man tilføjer en note
 
   for(var i = 0; i < dataList.length; i++)
+  //dette er et loop
   {
     var liElm = document.createElement("li");
     var ovElm = document.createElement("h2");
@@ -70,9 +79,11 @@ function buildList() {
     var daElm = document.createElement("p");
     var beElm = document.createElement("p");
     var delBtnEml = document.createElement("button");
+    //Her laver vi 2 kanapper
     var ediBtnEml  = document.createElement("button");
-    var deltagBtnEml = document.createElement("button");
+    //vi laver et html element - vi gør det for at gøre det dynamisk
 
+    //nu har vi tilføjet tekst fra setLocal
     ovElm.innerHTML = dataList[i].text;
     arElm.innerHTML = dataList[i].text;
     adElm.innerHTML = dataList[i].text;
@@ -90,12 +101,7 @@ function buildList() {
 
     delBtnEml.addEventListener("click", submitDelEvent);
 
-    deltagEml.innerHTML = "Deltag";
-    deltagEml.setAttribute("data-index", i);
-
-    deltagBtnEml.addEventListener("click", submitDeltagEvent);
-
-
+    //Man sætter Elementer på liElm(som er vores liste)
     liElm.appendChild(ovElm);
     liElm.appendChild(arElm);
     liElm.appendChild(adElm);
@@ -104,8 +110,7 @@ function buildList() {
     liElm.appendChild(beElm);
     liElm.appendChild(delBtnEml);
     liElm.appendChild(ediBtnEml);
-    liElm.appendChild(deltagBtnEml);
-
+    //Her sætter vi vore liElm ind i vores ulElm
     ulElm.appendChild(liElm);
   }
 }
@@ -120,6 +125,7 @@ console.log(user[arrIndex].text);
  if(promEdi.length > 0)
  {
    user[arrIndex].text = promEdi;
+   // vi kalder på variabelen for at hente data fra getLocal, aarIndex= nr. note (0-..) og den er = promEdi, fordi det er der hvor vores prompt er
  }
  else
  {
@@ -128,6 +134,7 @@ console.log(user[arrIndex].text);
 
  setLocal(user);
  buildList();
+ // genopbygger vores liste
 }
 
 function submitDelEvent(event)
@@ -136,6 +143,7 @@ function submitDelEvent(event)
  var user = getLocal();
 
  user.splice(arrIndex, 1);
+ //splice bruges til at kunne slette et note
 
  setLocal(user);
  buildList();
@@ -154,17 +162,13 @@ function submitUserEvent(event)
 
  submitUser(beOv.value, beAr.value, beAd.value, beTid.value, beDato.value, beBe.value);
  buildList();
- infoUser.style.border = "5px solid green";
  infoUser.style.display = "none";
 
 }
 
-function submitDeltagEvent(event)
-{
-  
-}
-
 window.onload = function()
+//call back struktur - det er her vi bygger vores liste
+
 {
   buildList();
 }
